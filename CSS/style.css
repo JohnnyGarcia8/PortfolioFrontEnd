@@ -3,6 +3,40 @@
                              INDEX
 **********************************************************************/
 
+/**************** Navbar ************************/
+
+.navbar.navbar-expand-lg.bg-primary.fixed-top{
+  padding: 4px  0px;
+}
+ul.list-group{
+  font-size: 17.7px;
+  padding: 0px;
+}
+i.fa-brands.fa-instagram.fa-2xl:hover{
+  color:rgb(198, 42, 28);
+
+}
+i.fa-brands.fa-linkedin-in.fa-2xl:hover{
+  color: dodgerblue;
+}
+i.fa-regular.fa-envelope.fa-2xl:hover{
+  color: rgb(198, 93, 55);
+}
+i.fa-brands.fa-github.fa-2xl:hover{
+  color:azure;
+}
+i.fa-solid.fa-user-lock.fa-2xl:hover{
+  color:lightblue;
+}
+i.fa-solid.fa-user.fa-2xl:hover{
+  color: lightblue;
+}
+.list-group{
+  --bs-list-group-bg:none;
+  --bs-list-group-border-color:none;
+}
+
+/******************* Fondo **********************/
 #Banner{
   background-image: url(../ASSETS/IMG/pexels-hitarth-jadhav-220357.jpg);
   background-position: center;
@@ -10,84 +44,49 @@
   margin:auto;
   background-repeat: no-repeat;
   min-height: 65vh;
+  padding: 345px;
   
 } 
-
-#perfil{
+/*************** Perfil ****************/
+#perfil{ /*Foto*/                      
   object-fit: cover;
   position: relative;
-  width: 250px;
+  height: auto;
+  width: 18rem !important;
   right: 220px;
-  bottom: 150px;
-} 
-
-h3.fw-normal_1{
+  bottom: 185px;
+  z-index: 1;
+  margin-bottom: 5.50rem;
+  
+}
+.Nombre{ 
   font-family: 'Noto Serif Armenian', serif;
   object-fit: cover;
   position: relative;
+  font-size: 33px;
+  margin-top: -22rem;
   width: 300px;
   height: 300px;
-  right: 250px;
+  right: 225px;
   top:100px;
-} 
-
-.fw-normal_1{
-  margin-top: -22rem;
 }
-/*
-body{
-  background-image: url(../ASSETS/IMG/pexels-consuelo-borroni-14806765.jpg);
+
+/*body{
+  background-image: url(../ASSETS/IMG/pexels-linda-gschwentner-10924810.jpg);
   background-position: center;
-  background-size: 100%;
+  background-size: 100%;}*/
 
-}*/
-
-.rounded-circle.w-75{
-  z-index: 1;
-  background-color: yellow;
-  height: auto;
-  width: 15rem !important;
-  margin-bottom: 7.50rem;
-  margin-right: 7.50rem;
-  
+/************************** Sections *******************************/
+section.acerca_de_mi {
+  margin-top: -15px;
 }
-
-i.fa-brands.fa-instagram.fa-2xl:hover{
-  color:rgb(198, 42, 28);
-}
-
-i.fa-brands.fa-linkedin-in.fa-2xl:hover{
-  color: dodgerblue;
-}
-
-i.fa-regular.fa-envelope.fa-2xl:hover{
-  color: rgb(198, 93, 55);
-}
-
-i.fa-brands.fa-github.fa-2xl:hover{
-  color:azure;
-}
-
-i.fa-solid.fa-user-lock.fa-2xl:hover{
-  color:lightblue;
-}
-
-i.fa-solid.fa-user.fa-2xl:hover{
-  color: lightblue;
-}
-
-.list-group{
-  --bs-list-group-bg:none;
-  --bs-list-group-border-color:none;
-}
-/*section.about{
-  margin-top: 7.5rem;
-}*/
-
 section.acerca_de_mi, section.educacion, section.proyectos{
-  background-color:steelblue;
-  
+background-color:steelblue;
+padding: 15px;
  }
+section.experiencia, section.habilidades, section.footer{
+  padding: 15px;
+}
 
 
 
@@ -108,3 +107,24 @@ position: relative;
 }
   
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
