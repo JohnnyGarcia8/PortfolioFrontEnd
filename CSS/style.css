@@ -7,11 +7,22 @@
 
 .navbar.navbar-expand-lg.bg-primary.fixed-top{
   padding: 4px  0px;
+  
 }
 ul.list-group{
   font-size: 17.7px;
   padding: 0px;
 }
+
+#Navbar-Palabras{
+  background-color:#3994fb80;
+  border-radius: 1rem;
+  padding: 0.2rem;
+}
+.nav-link{
+color: #f0ffff;
+}
+
 i.fa-brands.fa-instagram.fa-2xl:hover{
   color:#c42a1c;
 }
@@ -25,13 +36,15 @@ i.fa-brands.fa-github.fa-2xl:hover{
   color:#f0ffff;
 }
 i.fa-solid.fa-user-lock.fa-2xl:hover{
-  color:#add8e6;
+  color:#57d4ed;
 }
 
 .list-group{
   --bs-list-group-bg:none;
   --bs-list-group-border-color:none;
 }
+
+
 
 /******************* Fondo **********************/
 #Banner{
