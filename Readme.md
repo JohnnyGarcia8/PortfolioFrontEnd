@@ -1,0 +1,1 @@
+<!--poner pq usamos tales colores pq el diseño q elegimos las tegnologias q usamos en fin una descripcion del repositorio en si -->
