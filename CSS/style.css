@@ -1,138 +1,293 @@
+/******************************* MAIN ********************************/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
 
-/**********************************************************************
-                             INDEX
-**********************************************************************/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
-
-/**************** Navbar ************************/
-
-
-.navbar.navbar-expand-lg.bg-primary.fixed-top{
-  padding: 0.1rem;
-  font-family: 'Nunito', sans-serif;  
+:root {
+  --nav-footer-color: #0d6efd;
+  --theme-color: #fff;
+  --primary-color:#124f88;
+  --secundary-color: #F7C331;
+  --text-color-inverse: #fff;
+  --text-color: #000;
+  --navbar-shadow-color: #3476fb;
+  --menu-mobile-background-color: #3A4460;
 }
-.logo img{
-  transition: all 0.55s;
-  height: 3rem;
+
+html{
+  scroll-behavior:smooth;
+}
+
+section[id] {
+  scroll-margin-top: 60px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(224, 226, 216);
+  color: var(--text-color);
+  padding-top: 70px;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.horizontal-padding {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.vertical-padding {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/******* padding mobile ************/
+@media (max-width: 950px){
+.horizontal-padding {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.vertical-padding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+} 
+}
+
+
+/***************************** NAVBAR ***************************************/
+
+.header {
+  box-shadow: 0 0.1rem 0.1rem var(--navbar-shadow-color);
+  background-color: var(--theme-color);
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  margin: 0 auto;
+  background-color:var(--nav-footer-color);
+ 
+}
+
+/*********** Logo ************/
+
+.logo img {
+ height: 3rem;
+ width: auto;
+ display: flex;
+ align-items: center;
+ transition: all 0.55s;
 }
 .logo img:hover{
-  transform: scale(1.2);
+  transform: scale(1.16);
   transition: all 0.8s;
 }
 
-
-ul.list-group{
-  padding: 10px;
-}
-.navbar-nav{
+/************ Menu ***************/
+.nav {
+  display: flex;
   list-style: none;
-  font-size: 1.1rem;
-  display:inline-block;
+  margin: 0rem;
+  padding: 0rem;
 }
-.navbar-nav:hover{
-  transform: scale(1.2);
-}
-.navbar-nav a{
-  color: #ffffff;
+
+.nav li {
+  padding: 0 1.3rem;
   
 }
-.navbar-nav a:hover{
-  color: #ffbc0e;
+
+.nav a {
+  color: var(--theme-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 3.12rem;
+  text-transform: uppercase;
+  position: relative;
+
 }
 
-.btn i:hover{
-  transform: scale(1.3);
-  transition: all 0.7s;
-}
-
-i.fa-brands.fa-linkedin-in.fa-2xl:hover{
-  color: #1e90ff;
-}
-i.fa-regular.fa-envelope.fa-2xl:hover{
-  color: #c65d37;
-}
-i.fa-brands.fa-github.fa-2xl:hover{
-  color:#f0ffff;
-}
 i.fa-solid.fa-user-lock.fa-2xl:hover{
   color:#57d4ed;
 }
-
-.list-group{
-  --bs-list-group-bg:none;
-  --bs-list-group-border-color:none;
-}
-
-
-
-/******************* Fondo **********************/
-#Banner{
-  background-image: url(../ASSETS/IMG/pexels-hitarth-jadhav-220357.jpg);
-  background-position: center;
-  background-size: 100%;
-  margin:auto;
-  background-repeat: no-repeat;
-  min-height: 65vh;
-  padding: 345px;
-  
+i.fa-solid.fa-user-lock:hover{
+  transform: scale(1.2);
+  transition: all 0.8s;
 } 
-/*************** Perfil ****************/
-#perfil{ /*Foto*/                      
-  object-fit: cover;
-  position: relative;
-  height: auto;
-  width: 18rem !important;
-  right: 220px;
-  bottom: 185px;
-  z-index: 1;
-  margin-bottom: 5.50rem;
+
+.nav a:hover {
+  color:var(--secundary-color);
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+/************* Menu Mobile ****************/
+
+@media (max-width: 950px) {
+.nav{
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  background-color: var(--menu-mobile-background-color);  
+  height: 100%;
+  overflow-y: auto;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+
+.nav li {
+  padding: 0;
+}
+
+.nav a {
+  color: var(--text-color-inverse);
+  line-height: 4.36rem;
+  font-size: 1.44rem;
+}
+
+.open-menu,
+.close-menu {
+  display: block;
+  border: none;
+  background: none;
+}
+
+.close-menu {
+  align-self: flex-end;
+  padding: 2rem 1.5rem;
+}
+
+.menu_opened {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu a:hover,
+.menu a.selected {
+  color: var(--secundary-color);
+ }
+}
+
+
+/****************************** PERFIL ****************************/
+
+/************ Perfil Mobile *****************/
+#perfil{
+  padding-bottom: 35px;
+}
+
+.profile-info {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.profile-small-title {
+  font-size: 28px;
+  font-weight:bold;
+  margin: 0;
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.profile-title {
+  font-size: 38px;
+  font-weight:bold;
+  margin: 0;
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.profile-details {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 450px;
+  margin: 20px auto;
+}
+
+.profile-btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  font-size: 20px;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+
+}
+
+.profile-btn:hover {
+  filter: brightness(130%);
+}
+
+.profile-img {
+  width: 80%;
+  max-width: 350px;
+  border-radius: 200px;
+}
+
+.profile-img-section {
+  position:relative;
   
 }
-.Nombre{ 
-  font-family: 'Noto Serif Armenian', serif;
-  object-fit: cover;
-  position: relative;
-  font-size: 33px;
-  margin-top: -22rem;
-  width: 300px;
-  height: 300px;
-  right: 225px;
-  top:100px;
+
+/********** Perfil desk (escritorio) ****************/
+
+@media (min-width: 950px) {
+  .profile-info {
+    text-align: center;
+    margin-bottom: 50px;
+   
+  }
+  
+  .profile-img {
+    width: 100%;
+    max-width: 370px;
+   
+  }
+  
+  .profile {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .profile-title {
+    font-size: 63px;
+  }
+  
+  .profile-details {
+    font-size: 26.5px;
+    margin: 15px 0px 30px 0px;
+  }
+  
+  .profile-btn {
+    font-size: 28px;
+   
+  }
+  .profile-small-title{
+    text-align: center;
+  }
 }
-
-/*body{
-  background-image: url(../ASSETS/IMG/pexels-linda-gschwentner-10924810.jpg);
-  background-position: center;
-  background-size: 100%;}*/
-
-/************************** Sections *******************************/
-section.acerca_de_mi {
-  margin-top: -15px;
-}
-section.acerca_de_mi, section.educacion, section.proyectos{
-background-color:steelblue;
-padding: 15px;
- }
-section.experiencia, section.habilidades, section.footer{
-  padding: 15px;
-}
-
-
-/*********************************************************************
-                            DAHSBOARD
-**********************************************************************/
-
-/*User sin candado*/
-i.fa-solid.fa-user.fa-2xl:hover{
-    color: #add8e6;
-}
-
-
-
-
-
-
 
 
 
