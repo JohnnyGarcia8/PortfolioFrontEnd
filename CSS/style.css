@@ -102,7 +102,7 @@ body {
   color: var( --text-color1);
   font-size: 1.3rem;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: uppercase; /*mayúscula*/
 }
 .nav-link:hover{
   color:var(--secundary-color);
@@ -115,7 +115,7 @@ li.btn{
 }
 .btn:hover{
   color:#57d4ed; 
-  transform: scale(1.32); /*efecto de agrandar y tiempo*/
+  transform: scale(1.32); /*efecto de agrandar y su tiempo*/
   transition: all 0.8s;
 } 
 
@@ -314,7 +314,7 @@ li.btn{
   padding-bottom: 1rem;
 }
 .subtitle{
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   text-align: center;
   padding-bottom: 1.25rem;
   margin-bottom: 0.625rem;
@@ -430,13 +430,12 @@ h6{
 }
 .progress-bar{ 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: center;
-  overflow: hidden;
   text-align: center;
-  white-space: nowrap;
-  width: var(--w);
-  animation: Aumentar 2.5s ease-in-out;
+  white-space: nowrap; /*los espacios en blanco q sobran y los saltos de línea se eliminan*/
+  width: var(--w); 
+  animation: Aumentar 2.5s ease-in-out; /*empieza lo, acelera en el medio y termina lento*/
 }
 
 #html{
@@ -451,7 +450,7 @@ h6{
 
 @keyframes Aumentar{
   0%{width:0%;}
-  100%{width:var(--w)}
+  100%{width:var(--w)} /*llama a cada valor que tiene w(width)*/
 }
 
 /************* Skills mobile ************/
@@ -472,4 +471,63 @@ h6{
 }
 
 
+/*************************** PROYECTOS *******************************/
 
+.proyect-title{
+  text-transform: uppercase;
+  font-size:4.68rem;
+  font-style:oblique;
+  font-weight: 900;
+  padding:2.5rem;
+}
+.proyect-subtitle{
+  font-family:'Poppins'; 
+  font-size: 2.3rem;
+  font-weight: 550;
+  padding: 1.3rem 0;
+}
+
+.proyects-subtitle-bottom{
+  font-family:'Poppins'; 
+  font-size: 1.1rem;
+  padding: 0.4rem 0;
+  font-weight: 550;
+}
+.proyect-body {
+  background-color:var(--primary-color);
+  color:var(--text-color);
+  border-radius: 0.5rem;
+}
+.container.text-center{
+  padding: 1.5rem;
+}
+.proyecto-info{
+  font-size: 1.3rem;
+  font-weight: 550;
+}
+.img-fluid{
+  padding-bottom: 0.6rem;
+  border-radius: 1rem;
+ }
+
+/************* Proyecto Mobile ************/
+@media(max-width: 950px) {
+.proyect-title{
+  font-size:2.6rem;
+  padding: 1rem;
+}
+.proyect-subtitle{ 
+  font-size: 1.6rem;
+  padding: 1rem 0;
+
+}
+.proyecto-info{
+  font-size: 1.3rem;
+  font-weight: 550;
+}
+
+.proyects-subtitle-bottom{
+  font-size: 0.85rem;
+  padding: 0.4rem 0;
+}
+}
