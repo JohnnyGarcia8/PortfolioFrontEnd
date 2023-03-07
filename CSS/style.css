@@ -9,7 +9,7 @@
   --text-color1: #fff;
   --text-color2: #000;
   --primary-color:#124f88;
-  --secundary-color: #F7C331;
+  --secondary-color: #F7C331;
   --third-color:#1cb680;
   --fourth-color:#b67c27;
   --navbar-shadow-color: #3476fb;
@@ -47,7 +47,7 @@ body {
 
 /***** encuadre (padding) mobile ********/
 
-@media (max-width: 950px){
+@media (max-width: 600px){
 .horizontal-padding {
   padding-left: 15px;
   padding-right: 15px;
@@ -105,7 +105,7 @@ body {
   text-transform: uppercase; /*mayúscula*/
 }
 .nav-link:hover{
-  color:var(--secundary-color);
+  color:var(--secondary-color);
   transform: scale(1.05);
   transition: all 0.6s;
 }
@@ -126,7 +126,7 @@ li.btn{
 
 /************* Navbar Menu Mobile ****************/
 
-@media (max-width:768px) {
+@media (max-width:600px) {
 .logo img {
   height: 2.8rem;
   width: auto;
@@ -175,7 +175,7 @@ li.btn{
 
 .menu a:hover,
 .menu a.selected {
-  color: var(--secundary-color);
+  color: var(--secondary-color);
  }
 }
 
@@ -225,7 +225,7 @@ li.btn{
 
 .profile-btn {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--text-color1);
   border: none;
   font-size: 20px;
   padding: 0.5em 1em;
@@ -234,7 +234,7 @@ li.btn{
 }
 
 .profile-btn:hover {
-  filter: brightness(130%);
+  filter: brightness(130%); /*efecto de luminosidad-brillo*/
 }
 
 .profile-img {
@@ -250,7 +250,7 @@ li.btn{
 
 /********** Perfil desk (escritorio) ****************/
 
-@media (min-width: 950px) {
+@media (min-width: 600px) {
 #perfil{
   padding-top: 5rem;
 }
@@ -370,7 +370,7 @@ li.btn{
 
 /********** Mobile experiencia ***************/
 
-@media(max-width:950px){
+@media(max-width:600px){
 .experience-title{
   font-size:2.6rem;
 }
@@ -402,7 +402,7 @@ li.btn{
 /*************************** HABILIDADES ***************************************/
 .skills-title{
   text-transform: uppercase;
-  color:var(--text-color);
+  color:var(--text-color1);
   font-size:4.68rem;
   font-style:oblique;
   font-weight: 900;
@@ -454,7 +454,7 @@ h6{
 }
 
 /************* Skills mobile ************/
-@media(max-width: 950px) {
+@media(max-width: 600px) {
 
 .skills-title{
   font-size:2.6rem;
@@ -495,7 +495,7 @@ h6{
 }
 .proyect-body {
   background-color:var(--primary-color);
-  color:var(--text-color);
+  color:var(--text-color1);
   border-radius: 0.5rem;
 }
 .container.text-center{
@@ -511,7 +511,7 @@ h6{
  }
 
 /************* Proyecto Mobile ************/
-@media(max-width: 950px) {
+@media(max-width: 600px) {
 .proyect-title{
   font-size:2.6rem;
   padding: 1rem;
@@ -530,4 +530,162 @@ h6{
   font-size: 0.85rem;
   padding: 0.4rem 0;
 }
+}
+
+/*************************** CONTACTO *******************************/
+
+/************* Contacto Mobile *******************/
+.contact {
+  background-color: var(--primary-color);
+  color: var(--text-color1);
+  font-size: 18px;
+  border-radius: 14px;
+  padding: 25px;
+
+  display: grid; /*genero una cuadrícula con filas, items, columnas*/
+  gap: 25px; /*ancho de la separacion por fila o columna*/
+}
+
+.contact p,
+.contact h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contact-details,
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-details-group,
+.contact-form-group {
+  display: grid; /*cuadrícula interna*/
+  gap: 3px; /*espacio entre los elementos hijos*/
+}
+
+.contact-label {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 7px;
+  border: none;
+  height: 30px;
+  padding: 5px 10px;
+}
+
+.contact-form textarea {
+  height: auto;
+  resize: vertical; /*permite cambiar el tamaño del elemento solo verticalmente*/
+}
+
+.contact-form-submit {
+  width: 100%;
+  height: 50px;
+  background-color:var(--text-color2);
+  border-radius: 7px;
+  color: var(--text-color1);
+  border: 1px solid var(--text-color1);
+}
+
+.redes {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-group{ /*oculto color de fondo y borde en iconos*/
+  --bs-list-group-bg:none;
+  --bs-list-group-border-color:none;
+}
+
+
+/************* Desk *******************/
+@media (min-width: 600px) {
+.contact {
+  font-size: 20px;
+  padding: 70px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.contact-title {
+  font-size: 35px;
+  grid-area: title; /*utilizo area para darle un tamaño y una ubicacion */
+}
+.contact-details {
+  grid-area: details;
+}
+.contact-form {
+  grid-area: form;
+}
+.contact {
+  grid:                        /*ubico cada elemento definido por grid-area en filas y columnas*/
+        "title   form" auto
+        "details form" auto
+        "social  form" auto /
+        1fr      1fr; /*ambas columbas con mismo tamaño*/
+}
+.contact-form-submit:hover {
+  box-shadow: 0 0 14px var(--nav-footer-color);
+}
+i.fa-brands.fa-linkedin-in.fa-2xl:hover{
+  color: #1e90ff;
+}
+i.fa-regular.fa-envelope.fa-2xl:hover{
+  color: #c65d37;
+}
+i.fa-brands.fa-github.fa-2xl:hover{
+  color:#f0ffff;
+}
+i.fa-solid.fa-user-lock.fa-2xl:hover{
+  color:#57d4ed;
+}
+
+.contact p,
+.contact h2 {
+  margin: 0.3rem;
+  padding: 0.2rem;
+}
+
+}
+
+/*************************** FOOTER *******************************/
+
+.footer {
+  box-sizing: border-box ;
+  font-family:'Poppins' , sans-serif;
+  color:var(--text-color1);
+  background-color:var(--primary-color);
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+p{
+  margin: 0.1rem;
+}
+a {
+  text-decoration: none;
+  color:var(--text-color1);
+}
+
+/************* Footer mobile ************/
+@media(max-width: 600px) {
+  .footer {
+    padding: 0.1rem;
+    font-size: 0.73rem;
+  }
 }
