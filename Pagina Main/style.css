@@ -369,7 +369,7 @@ li.btn{
   margin-bottom: 0.3rem;
 }
 .item p{
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   font-weight: 550;
 }
 .item.izq{ /*color a los bordes*/
@@ -495,18 +495,26 @@ h6{
   font-weight: 900;
   padding:2.5rem;
 }
-.project-subtitle{
-  font-family:'Poppins'; 
-  font-size: 2.3rem;
-  font-weight: 550;
-  padding: 1.3rem 0;
+.projects{
+  font-family:'Poppins',sans-serif;
 }
-
-.project-description{
-  font-family:'Poppins'; 
-  font-size: 1.1rem;
-  padding: 0.4rem 0;
+.project-subtitle{
+  font-size: 3rem;
   font-weight: 550;
+  padding-top: 1.3rem;
+  margin: 0;
+}
+.project-date{
+  display: block;
+  color: var(--third-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+.project-description{
+  font-size: 1.1rem;
+  padding: 0.6rem 0;
+  font-weight: 550;
+  padding-bottom: 3rem;
 }
 .project-body {
   background-color:var(--primary-color);
@@ -523,27 +531,35 @@ h6{
 .img-fluid{
   padding-bottom: 0.6rem;
   border-radius: 1rem;
- }
+}
+
+
 
 /************* Proyecto Mobile ************/
 @media(max-width: 600px) {
 .project-title{
   font-size:2.6rem;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
 }
 .project-subtitle{ 
-  font-size: 1.6rem;
-  padding: 1rem 0;
-
+  font-size: 1.65rem;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
 }
 .proyecto-info{
   font-size: 1.3rem;
   font-weight: 550;
 }
 
+.project-date{
+  margin-bottom: 0.65rem;
+  font-size: 0.8rem;
+}
 .project-description{
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   padding: 0.4rem 0;
+  line-height: 1.25rem;
 }
 }
 
