@@ -184,32 +184,41 @@ li.btn{
 /************ Perfil Mobile *****************
 (en esta caso decidi primero hacerlo en mobile)*/
 #perfil{
-  padding-top: 1.5rem;
+  padding-top: 1.2rem;
   padding-bottom: 2.2rem;
 }
 .profile{
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 .profile-info {
   margin-bottom: 1.6rem;
 }
 
-.profile-title {
-  font-size: 2.36rem;
+.profile-small-title {
+  font-size: 1.3rem;
   font-weight:bold;
   margin: 0;
   color: var(--primary-color);
-  letter-spacing: 0.1rem;
-  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.08rem;
+  margin-bottom: 0.1rem;
 }
 
-.profile-small-title {
-  font-size: 1.6rem;
+.profile-title {
+  font-size: 2.2rem;
   font-weight:bold;
   margin: 0;
   color: var(--primary-color);
   letter-spacing: 0.1rem;
-  font-family: "Roboto", sans-serif;
+}
+
+.profile-titulo-academico{
+  font-size: 1.15rem;
+  font-weight:bold;
+  margin: 0;
+  color: var(--primary-color);
+  letter-spacing: 0.06rem;
+  margin-top: 0.6rem;
 }
 
 .profile-details {
@@ -217,9 +226,7 @@ li.btn{
   font-size: 1.17rem;
   font-weight: 500;
   line-height: 1.35;
-  max-width: 450px;
-  margin-bottom: 0.8rem;
-  margin-bottom: 1.4rem;
+  margin: 0.3rem 1rem; 
   color: var(--text-color2);
 }
 
@@ -230,6 +237,7 @@ li.btn{
   font-size: 1.25rem;
   padding: 0.6em 1em;
   border-radius: 3.13rem;
+  margin: 1rem;
 }
 .profile-btn-cv:hover {
   filter: brightness(130%); /*efecto de luminosidad-brillo*/
@@ -243,7 +251,6 @@ li.btn{
 }
 .profile-img-section {
   position:relative;
-  
 }
 
 /********** Perfil desk (escritorio) ****************/
@@ -253,29 +260,34 @@ li.btn{
   padding-top: 5rem;
 }
 .profile {
-  text-align: left;
+  text-align:center;
   display: flex;
   justify-content: space-between;
   max-width: 1050px;
   margin: 0 auto;
-  align-items: center;
 }
 
 .profile-info {
-  text-align: center;
   margin-bottom: 3.12rem;
+}
+
+.profile-small-title{
+  font-size: 2.3rem;
 }
 
 .profile-title {
   font-size: 4rem;
 }
-.profile-small-title{
-  text-align: center;
+.profile-titulo-academico{
+  font-size: 1.75rem;
+  margin-top: 1.2rem;
 }
 
 .profile-details {
-  font-size: 1.65rem;
-  margin: 1rem 0rem;
+  font-size: 1.25rem;
+  margin: 0.2rem 1rem 1rem;
+  max-width: 500px;
+  font-weight: bold;
 }
 
 .profile-btn-cv {
@@ -284,6 +296,7 @@ li.btn{
 }
 
 .profile-img {
+  margin-top: 2.4rem;
   width: 100%;
   max-width: 390px;
 }
@@ -323,21 +336,16 @@ li.btn{
 .col{
   font-family: "Poppins", sans-serif;
 }
-
 .col.izquierda{
   padding-top: 2.3rem;
   padding-right: 2.19rem;
-  
 }
 .col.derecha{
   padding-top: 2.3rem;
   padding-left: 2.19rem;
 }
-.title-academica, .title-laboral{
-  font-size: 1.3rem;
-  margin-bottom: 0.66rem;
-}
-.item{
+
+.item.der, .item.izq{ 
   padding: 1.25rem;
   margin-bottom: 1.875rem;
   background-color: #366993;
@@ -345,10 +353,20 @@ li.btn{
   border-radius: 0.4rem;
 }
 
+.nombre-empresa, .nombre-institucion{
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.title-academica, .title-laboral{
+  font-size: 1.3rem;
+  margin-bottom: 0.34rem;
+}
+
 .date{
   display: block;
   color: var(--third-color);
-  margin-bottom: 0.66rem;
+  margin-bottom: 0.3rem;
 }
 .item p{
   line-height: 1.5rem;
@@ -470,27 +488,27 @@ h6{
 
 /*************************** PROYECTOS *******************************/
 
-.proyect-title{
+.project-title{
   text-transform: uppercase;
   font-size:4.68rem;
   font-style:oblique;
   font-weight: 900;
   padding:2.5rem;
 }
-.proyect-subtitle{
+.project-subtitle{
   font-family:'Poppins'; 
   font-size: 2.3rem;
   font-weight: 550;
   padding: 1.3rem 0;
 }
 
-.proyects-subtitle-bottom{
+.project-description{
   font-family:'Poppins'; 
   font-size: 1.1rem;
   padding: 0.4rem 0;
   font-weight: 550;
 }
-.proyect-body {
+.project-body {
   background-color:var(--primary-color);
   color:var(--text-color1);
   border-radius: 0.5rem;
@@ -509,11 +527,11 @@ h6{
 
 /************* Proyecto Mobile ************/
 @media(max-width: 600px) {
-.proyect-title{
+.project-title{
   font-size:2.6rem;
   padding: 1rem;
 }
-.proyect-subtitle{ 
+.project-subtitle{ 
   font-size: 1.6rem;
   padding: 1rem 0;
 
@@ -523,7 +541,7 @@ h6{
   font-weight: 550;
 }
 
-.proyects-subtitle-bottom{
+.project-description{
   font-size: 0.85rem;
   padding: 0.4rem 0;
 }
@@ -610,7 +628,7 @@ h6{
 
 
 /************* Desk *******************/
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 .contact {
   font-size: 1.25rem;
   padding: 4.37rem;
@@ -685,3 +703,6 @@ a {
     font-size: 0.73rem;
   }
 }
+
+
+
