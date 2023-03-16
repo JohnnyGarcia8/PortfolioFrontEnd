@@ -24,7 +24,7 @@ section[id] {
   scroll-margin-top: 3.75rem; /**** espacio entre navbar y secciones al usar menu *****/
 }
 
-body {
+body { /*Banner*/
   background-color: #c9e5f6;
   padding-top: 4.38rem;
   color: var(--text-color1);
@@ -98,7 +98,7 @@ body {
 }
 
 .nav-link {
-  font-family:"Reboto", sans-serif;
+  font-family:"Noto", sans-serif;
   color: var( --text-color1);
   font-size: 1.3rem;
   font-weight: 500; /*grosor de la letra*/
@@ -189,7 +189,7 @@ li.btn{
 }
 .profile{
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family:'Poppins', sans-serif;
 }
 .profile-info {
   margin-bottom: 1.6rem;
@@ -210,6 +210,7 @@ li.btn{
   margin: 0;
   color: var(--primary-color);
   letter-spacing: 0.1rem;
+  font-family:'Montserrat', sans-serif;
 }
 
 .profile-titulo-academico{
@@ -238,6 +239,7 @@ li.btn{
   padding: 0.6em 1em;
   border-radius: 3.13rem;
   margin: 1rem;
+  font-family:'Poppins', sans-serif;
 }
 .profile-btn-cv:hover {
   filter: brightness(130%); /*efecto de luminosidad-brillo*/
@@ -272,7 +274,7 @@ li.btn{
 }
 
 .profile-small-title{
-  font-size: 2.3rem;
+  font-size: 1.9rem;
 }
 
 .profile-title {
@@ -350,7 +352,7 @@ li.btn{
   margin-bottom: 1.875rem;
   background-color: #366993;
   position: relative;
-  border-radius: 0.4rem;
+  border-radius: 0.4rem; 
 }
 
 .nombre-empresa, .nombre-institucion{
@@ -382,7 +384,9 @@ li.btn{
   margin-left: 1.25rem;
   width: 90%;
 }
-
+#Carrusel{
+  padding-top: 3.5rem;
+}
 /********** Mobile experiencia ***************/
 
 @media(max-width:600px){
@@ -411,6 +415,9 @@ li.btn{
 }
 .item p{
   font-size: 0.9rem;
+}
+#Carrusel{
+  padding: 1.8rem 0 0 0;
 }
 }
 
@@ -574,6 +581,7 @@ h6{
 
   display: grid; /*genero una cuadrícula con filas, items, columnas*/
   gap: 1.7rem; /*ancho de la separacion por fila o columna*/
+  font-family:'Poppins', sans-serif;
 }
 
 .contact p,
