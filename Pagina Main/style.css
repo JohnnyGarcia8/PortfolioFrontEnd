@@ -35,7 +35,6 @@ body { /*Banner*/
 }
 
 /***** encuadre (padding) desk ********/
-
 .horizontal-padding {
   padding-left: 3.13rem;
   padding-right: 3.13rem;
@@ -46,7 +45,6 @@ body { /*Banner*/
 }
 
 /***** encuadre (padding) mobile ********/
-
 @media (max-width: 600px){
 .horizontal-padding {
   padding-left: 0.94rem;
@@ -74,7 +72,6 @@ body { /*Banner*/
 }
 
 /*********** Logo ************/
-
 .logo img {
  height: 3rem;
  width: auto;
@@ -124,7 +121,6 @@ li.btn{
 }
 
 /************* Navbar Menu Mobile ****************/
-
 @media (max-width:600px) {
 .logo img {
   height: 2.8rem;
@@ -175,14 +171,10 @@ li.btn{
 .menu a:hover,
 .menu a.selected {
   color: var(--secondary-color);
- }
-}
-
+}}
 
 /****************************** PERFIL ****************************/
-
-/************ Perfil Mobile *****************
-(en esta caso decidi primero hacerlo en mobile)*/
+/************ Perfil Mobile (en esta caso decidi primero hacerlo en mobile por comodidad)*/
 #perfil{
   padding-top: 1.2rem;
   padding-bottom: 2.2rem;
@@ -224,9 +216,9 @@ li.btn{
 
 .profile-details {
   text-align: center;
-  font-size: 1.17rem;
-  font-weight: 500;
-  line-height: 1.35;
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: bold;
   margin: 0.3rem 1rem; 
   color: var(--text-color2);
 }
@@ -256,7 +248,6 @@ li.btn{
 }
 
 /********** Perfil desk (escritorio) ****************/
-
 @media (min-width: 600px) {
 #perfil{
   padding-top: 5rem;
@@ -289,7 +280,6 @@ li.btn{
   font-size: 1.25rem;
   margin: 0.2rem 1rem 1rem;
   max-width: 500px;
-  font-weight: bold;
 }
 
 .profile-btn-cv {
@@ -301,11 +291,9 @@ li.btn{
   margin-top: 2.4rem;
   width: 100%;
   max-width: 390px;
-}
-}
+}}
 
 /******************************* EXPERIENCIA ********************************/
-
 .experience{
   background-color:var(--primary-color);
   color:var(--text-color1);
@@ -387,8 +375,8 @@ li.btn{
 #Carrusel{
   padding-top: 3.5rem;
 }
-/********** Mobile experiencia ***************/
 
+/********** Mobile experiencia ***************/
 @media(max-width:600px){
 .experience-title{
   font-size:2.6rem;
@@ -418,8 +406,7 @@ li.btn{
 }
 #Carrusel{
   padding: 1.8rem 0 0 0;
-}
-}
+}}
 
 /*************************** HABILIDADES ***************************************/
 .skills-title{
@@ -475,9 +462,8 @@ h6{
   100%{width:var(--w)} /*llama a cada valor que tiene w(width)*/
 }
 
-/************* Skills mobile ************/
+/************* Habilidades mobile ************/
 @media(max-width: 600px) {
-
 .skills-title{
   font-size:2.6rem;
 }
@@ -489,12 +475,9 @@ h6{
 }
 h6{
   font-size: 1.05rem;
-}
-}
-
+}}
 
 /*************************** PROYECTOS *******************************/
-
 .project-title{
   text-transform: uppercase;
   font-size:4.68rem;
@@ -540,8 +523,6 @@ h6{
   border-radius: 1rem;
 }
 
-
-
 /************* Proyecto Mobile ************/
 @media(max-width: 600px) {
 .project-title{
@@ -567,11 +548,9 @@ h6{
   font-size: 0.9rem;
   padding: 0.4rem 0;
   line-height: 1.25rem;
-}
-}
+}}
 
 /*************************** CONTACTO *******************************/
-
 /************* Contacto Mobile *******************/
 .contact {
   background-color: var(--primary-color);
@@ -584,40 +563,39 @@ h6{
   font-family:'Poppins', sans-serif;
 }
 
-.contact p,
-.contact h2 {
+.contact p, .contact-title {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
 .contact-title {
-  font-size: 1.87rem;
+  font-size: 1.9rem;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
 }
 
-.contact-details,
-.contact-form {
+.contact-details, .contact-form {
   display: grid;
   gap: 1.25rem;
 }
 
-.contact-details-group,
-.contact-form-group {
+.contact-details-group, .contact-form-group {
   display: grid; /*cuadrícula interna*/
   gap: 0.2rem; /*espacio entre los elementos hijos*/
-  font-size: 1.1rem;
 }
 
 .contact-label {
   text-transform: uppercase;
   font-weight: 500;
+  font-size: 1rem;
+}
+.contact-text {
+  font-size: 0.9rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
   border-radius: 0.4rem;
   border: none;
   height: 1.87rem;
@@ -650,28 +628,36 @@ h6{
   --bs-list-group-border-color:none;
 }
 
-
-/************* Desk *******************/
+/************* Contacto Desk *******************/
 @media (min-width: 700px) {
 .contact {
-  font-size: 1.25rem;
   padding: 4.37rem;
   max-width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 .contact-title {
-  font-size: 2.2rem;
+  font-size: 2.7rem;
   grid-area: title; /*utilizo area para darle un tamaño y una ubicacion */
+}
+.contact-label {
+  font-size: 1.3rem;
+}
+.contact-text {
+  font-size: 1rem;
+}
+.contact-form-submit{
+  font-size: 1.3rem;
 }
 .contact-details {
   grid-area: details;
 }
 .contact-form {
   grid-area: form;
+  font-size: 1.1rem;
 }
 .contact {
-  grid:                        /*ubico cada elemento definido por grid-area en filas y columnas*/
+  grid: /*ubico cada elemento definido por grid-area en filas y columnas*/
         "title   form" auto
         "details form" auto
         "social  form" auto /
@@ -689,20 +675,13 @@ i.fa-regular.fa-envelope.fa-2xl:hover{
 i.fa-brands.fa-github.fa-2xl:hover{
   color:#f0ffff;
 }
-i.fa-solid.fa-user-lock.fa-2xl:hover{
-  color:#57d4ed;
-}
-
 .contact p,
 .contact h2 {
   margin: 0.3rem;
   padding: 0.2rem;
-}
-
-}
+}}
 
 /*************************** FOOTER *******************************/
-
 .footer {
   box-sizing: border-box ;
   font-family:'Poppins' , sans-serif;
@@ -710,7 +689,10 @@ i.fa-solid.fa-user-lock.fa-2xl:hover{
   background-color:var(--nav-footer-color);
   padding: 0.3rem;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+}
+#footer {
+ padding: 0.5rem;
 }
 p{
   margin: 0.1rem;
@@ -719,14 +701,15 @@ a {
   text-decoration: none;
   color:var(--text-color1);
 }
-
 /************* Footer mobile ************/
 @media(max-width: 600px) {
   .footer {
     padding: 0.1rem;
     font-size: 0.73rem;
   }
-}
+  #footer {
+    padding: 0.2rem;
+  }}
 
 
 
