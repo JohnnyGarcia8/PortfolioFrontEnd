@@ -24,11 +24,11 @@ section[id] {
   scroll-margin-top: 3.75rem; /**** espacio entre navbar y secciones al usar menu *****/
 }
 
-body { /*Banner*/
+body { 
   background-color: #c9e5f6;
   padding-top: 4.38rem;
   color: var(--text-color1);
-  background-image: url(../ASSETS/IMG/pexels-consuelo-borroni-14806765\ prueba.jpg);
+  background-image: url(../ASSETS/IMG/pexels-consuelo-borroni-14806765\ prueba.jpg); /*Banner*/
   background-position: top;
   margin:auto;
   background-repeat: no-repeat;
@@ -45,7 +45,7 @@ body { /*Banner*/
 }
 
 /***** encuadre (padding) mobile ********/
-@media (max-width: 600px){
+@media (max-width: 768px){
 .horizontal-padding {
   padding-left: 0.94rem;
   padding-right: 0.94rem;
@@ -111,9 +111,7 @@ li.btn{
  
 }
 .btn:hover{
-  color:#57d4ed; 
-  transform: scale(1.3); /*efecto de agrandar y su tiempo*/
-  transition: all 0.8s;
+  color:#57d4ed;
 } 
 .open-menu,
 .close-menu { /*oculto iconos*/
@@ -121,7 +119,7 @@ li.btn{
 }
 
 /************* Navbar Menu Mobile ****************/
-@media (max-width:600px) {
+@media (max-width: 768px) {
 .logo img {
   height: 2.8rem;
   width: auto;
@@ -248,7 +246,7 @@ li.btn{
 }
 
 /********** Perfil desk (escritorio) ****************/
-@media (min-width: 600px) {
+@media (min-width: 768px) {
 #perfil{
   padding-top: 5rem;
 }
@@ -377,7 +375,7 @@ li.btn{
 }
 
 /********** Mobile experiencia ***************/
-@media(max-width:600px){
+@media(max-width: 768px){
 .experience-title{
   font-size:2.6rem;
 }
@@ -426,7 +424,7 @@ li.btn{
   padding: 4rem;
 }
 
-h6{
+.tecnologia, .porcentaje {
   font-family:'Poppins', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -444,7 +442,7 @@ h6{
   text-align: center;
   white-space: nowrap; /*los espacios en blanco q sobran y los saltos de línea se eliminan*/
   width: var(--w); 
-  animation: Aumentar 2.5s ease-in-out; /*empieza lo, acelera en el medio y termina lento*/
+  animation: Aumentar 2.5s ease-in-out; /*empieza lento, acelera en el medio y termina lento*/
 }
 
 #html{
@@ -463,7 +461,7 @@ h6{
 }
 
 /************* Habilidades mobile ************/
-@media(max-width: 600px) {
+@media(max-width: 768px) {
 .skills-title{
   font-size:2.6rem;
 }
@@ -524,7 +522,7 @@ h6{
 }
 
 /************* Proyecto Mobile ************/
-@media(max-width: 600px) {
+@media(max-width: 768px) {
 .project-title{
   font-size:2.6rem;
   padding-top: 1rem;
@@ -629,7 +627,7 @@ h6{
 }
 
 /************* Contacto Desk *******************/
-@media (min-width: 700px) {
+@media (min-width: 768px) {
 .contact {
   padding: 4.37rem;
   max-width: 1000px;
@@ -687,26 +685,24 @@ i.fa-brands.fa-github.fa-2xl:hover{
   font-family:'Poppins' , sans-serif;
   color:var(--text-color1);
   background-color:var(--nav-footer-color);
-  padding: 0.3rem;
-  text-align: center;
   font-size: 0.9rem;
 }
 #footer {
  padding: 0.5rem;
 }
-p{
+#contenedor-info{
   margin: 0.1rem;
 }
-a {
-  text-decoration: none;
+.return {
+  text-decoration: none; /*texto a subrayado*/
   color:var(--text-color1);
 }
 /************* Footer mobile ************/
-@media(max-width: 600px) {
-  .footer {
-    padding: 0.1rem;
-    font-size: 0.73rem;
-  }
-  #footer {
-    padding: 0.2rem;
-  }}
+@media(max-width: 768px) {
+.footer {
+  padding: 0.1rem;
+  font-size: 0.73rem;
+}
+#footer {
+  padding: 0.2rem;
+}}

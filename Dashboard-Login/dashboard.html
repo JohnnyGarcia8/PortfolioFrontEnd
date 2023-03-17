@@ -5,365 +5,331 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Dashboard </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <script src="https://kit.fontawesome.com/2a193c6119.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/2a193c6119.js" crossorigin="anonymous"></script>
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="dashboard.css"> 
-    <!--JavaScript-->
-    <script defer src="../Pagina Main/app.js"></script>
-</head>
-  
-<body> 
-   <!--Navbar-->
-    <header class="header">
-      <nav class="navbar fixed-top">
-        <div class="container-fluid">
-          <div class="logo">
-            <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank">
-             <img src="../ASSETS/IMG/Logo ARGPrograma negro" alt="Logo distintivo">
-            </a>
-          </div>
-          <button class="open-menu" aria-label="Abrir menú">
-            <i class="fa-solid fa-bars fa-2xl"></i>
-          </button>
-          <ul class="menu nav">
-            <button class="close-menu" aria-label="Cerrar menú">
-              <i class="fa-solid fa-arrow-left fa-2xl"></i>
-            </button>
-           <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Perfil</a></li>
-           <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-           <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-           <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-           
-    <!--Boton USER-->
-            <li class="btn">
-              <i class="fa-solid fa-user-lock fa-2xl" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
-            </li>
-          </ul>
-        </div>
-      </nav>
-           
-    <!--Modal LOGIN-User--->
-    <div class="modal fade modal-lg text-black" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title w-100 text-center" id="login-ModalLabel"> Login</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3 row">
-              <label for="staticEmail" class="col-sm-2 col-form-label">Email </label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="staticEmail" placeholder="correo@ejemplo.com">
-              </div>
-            </div>
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Clave </label>
-            <div class="col-sm-10">
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Recordarme</label>
-          </div>
-        </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Ingresar</button>
-      </div>
-    </div>
-  </div>
-</div>
-</header>
-                  <!------SECCIONES-------->
-
-  <!---------------------- Perfil ---------------------->
-    <div class="horizontal-padding vertical-padding">
-      <section class="profile" id="perfil">
-        <div class="profile-info">
-          <h3 class="profile-small-title">Bienvenido, soy </h3>
-          <h1 class="profile-title">Jonathan García</h1>
-          <h2 class="profile-titulo-academico">Desarrolador Full Stack Jr</h2>
-          <p class="profile-details">
-            Como joven programador con experiencia limitada, estoy enfocado en expandir continuamente mis conocimientos
-            y el dominio de nuevas tecnologias. Me destaco por ser una persona dedicada y responsable en busca de 
-            un grupo de trabajo unido y dispuesto a crecer. Estoy comprometido a entregar código de alta calidad que 
-            satisfaga las necesidades de los clientes y usuarios finales por igual.
-          </p>
-          <button class="profile-btn-cv">Descargar cv</button>
-        </div>
-        <span class="profile-img-section">
-          <img class="profile-img" src="../ASSETS/IMG/fototraje2.jpg" alt="programador"/>
-        </span>
-      </section>
-    </div>
-  <!-------------------- Experiencia ------------------->
-    <div class="horizontal-padding vertical-padding">
-      <section class="experience" id="experiencia">
-        <div class="contenido-seccion">
-          <h1 class="experience-title" style="-webkit-text-stroke: 2px #4ab7df;">Experiencia</h1>
-          </div>
-            <div class="fila">
-              <div class="col izquierda">
-                  <h2 class="subtitle">Académica</h2>
-                  <div class="item izq">
-                  <h3 class="nombre-institucion">Instituto IMEI</h3>
-                    <h4 class="title-academica">Bachillerato en Ciencias Naturales</h4>
-                      <span class="date">Enero 2015 - Diciembre 2019</span>
-                      <p>Escolta de la bandera del Instituto durante el ciclo lectivo 2019.
-                        Becado por mejor promedio en los ciclos lectivos 2017, 2018 y 2019.</p>
-                    </div>
-                  <div class="item izq">
-                    <h3 class="nombre-institucion">Argentina Programa</h3>
-                      <h4 class="title-academica">#SeProgramar</h4>
-                      <span class="date">Abril 2022 - Junio 2022</span>
-                      <p>Durante la primera etapa de Argentina Programa, obtuve una introducción 
-                        a la programación explorando varios lenguajes tales como: Gobstones, Ruby y 
-                        JavaScript.</p>
-                    </div>
-                  <div class="item izq">
-                    <h3 class="nombre-institucion">Argentina Programa</h3>
-                      <h4 class="title-academica">#YoProgramo</h4>
-                      <span class="date">Octubre 2021 - Mayo 2022</span>
-                      <p>Ultima etapa de cursado, basado en el aprendizaje de diseño de software 
-                        FronEnd y BackEnd. Tecnologias y lenguajes aprendidos: Html, Css, JavaScript, 
-                        Angular, Git Hub, MySql, Java..... </p>
-                    </div>
-                  </div>
-                <div class="col derecha">
-                  <h2 class="subtitle">Laboral</h2>
-                  <div class="item der">
-                    <h3 class="nombre-empresa">Bianco</h3>
-                      <h4 class="title-laboral">Agente de ventas</h4>
-                      <span class="date">Febrero 2021 - Abril 2021</span>
-                      <p>Vendedor de productos para el hogar, sabanas, toallones, indumentaria, 
-                        calzado, electrodomésticos y bazar.</p>
-                    </div>
-                    <div class="item der">
-                      <h3 class="nombre-empresa">Coquimbito Beer Club</h3>
-                        <h4 class="title-laboral">Bartender</h4>
-                        <span class="date">Octubre 2021</span>
-                        <p>Tareas realizadas: atención al público, elaboración de bebidas y cocteles 
-                          adenás de proveer cerveza tirada de barril. </p>
-                    </div>
-                    <div class="item der">
-                      <h3 class="nombre-empresa">Gulf</h3>
-                        <h4 class="title-laboral">Expendedor de combustible</h4>
-                        <span class="date">Diciembre 2021 - Abril 2022 </span>
-                        <p>Tareas realizadas: administración de dinero, atención al público y manipulación
-                           de combustibles líquidos y gaseosos.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="container text-center" id="Carrusel">
-                  <div class="row">
-                    <div class="col-12">
-                      <div id="carouselCertificados" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active text-center">
-                            <img src="../ASSETS/IMG/Certificado Git- GitHub.png" class="img-fluid" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../ASSETS/IMG/Certificado SeProgramar.jpeg" class="img-fluid" alt="...">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificados" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCertificados" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                  </div>
-                </div>
-                </div>
-                </div>
-              </section>
-            </div>             
-  <!------------------- Habilidades -------------------->
-    <div class="horizontal-padding vertical-padding">
-      <section class="habilidades" id="skills">
-        <div class="container-fluid">
-          <div class="container text-center">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-              <h1 class="skills-title" style="-webkit-text-stroke: 2px #4ab7df;">Hard & Soft Skills</h1>
-            </div>
-          <div class="row align-items-center">
-      
-          <div class="col-md-6">
-       <!---- Barra HTML ---->
-          <div class="skill mb-4">
-            <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">HTML</h6>  
-              <h6 class="font-weight-bold">85%</h6>
-            </div>
-            <div class="progress">
-             <div class="progress-bar" id="html" role="progressbar" style="--w:85%"></div>
-            </div>
-          </div>
-       <!---- Barra CSS ---->
-          <div class="skill mb-4">
-            <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">CSS</h6>
-              <h6 class="font-weight-bold">85%</h6>
-            </div>
-            <div class="progress">
-              <div class="progress-bar bg-primary" id="css" role="progressbar" style="--w:85%;"></div>
-            </div>
-          </div>
-       <!---- Barra JAVASCRIPT ---->
-          <div class="skill mb-4">
-            <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">Javascript</h6>
-              <h6 class="font-weight-bold">20%</h6>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" id="javascript" role="progressbar" style="--w:20%;"></div>
-            </div>
-          </div>
-        </div> 
-        
-        <div class="col-md-6">
-          <!---- Barra ANGULAR ---->
-          <div class="skill mb-4">
-            <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">Angular</h6>
-              <h6 class="font-weight-bold">50%</h6>
-            </div>
-            <div class="progress">
-             <div class="progress-bar bg-danger" id="angular" role="progressbar" style="--w:50%;"></div>
-            </div>
-          </div>
-       <!---- Barra  ---->
-          <div class="skill mb-4">
-            <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">Ej</h6>
-              <h6 class="font-weight-bold">75%</h6>
-            </div>
-            <div class="progress">
-              <div class="progress-bar bg-info" id="ej" role="progressbar" style="--w:75%;"></div>
-            </div>
-          </div>
-       <!---- Barra  ---->
-          <div class="skill mb-4">
-            <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">Ej</h6>
-              <h6 class="font-weight-bold">40%</h6>
-            </div>
-            <div class="progress">
-              <div class="progress-bar bg-dark" id="ej" role="progressbar" style="--w:40%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-  <!------------------- Proyectos ------------------->
-    <div class="horizontal-padding vertical-padding">  
-      <section class="project" id="proyectos">
-        <div class="project-body">
-        <div class="container text-center">
-          <div class="position-relative d-flex align-items-center justify-content-center">
-            <h1 class="project-title" style="-webkit-text-stroke: 2px #4ab7df;">Proyectos</h1>
-          </div>
-          <div class="projects">
-          <h3 class="project-subtitle">Calculadora</h3>
-          <span class="project-date">Noviembre 2022</span>
-          <span class="project-img-section">
-            <img class="img-fluid" src="../ASSETS/IMG/Calculadora.png" alt="Calculadora">
-          </span>
-          <h5 class="project-description"> Contiene botones funcionales que nos permiten realizar cálculos 
-            aritméticos (suma, resta, multiplicación y división) además de un botón (C) para eliminar el cálculo en curso. 
-          </h5>
-        </div>
-          <div class="projects">
-            <h3 class="project-subtitle">Portfolio Web</h3>
-            <span class="project-date">Octubre 2022 - Mayo 2023</span>
-            <span class="project-img-section">
-              <img class="img-fluid" src="../ASSETS/IMG/Img-Portfolio.png" alt="Porfolio Web">
-            </span>
-            <h5 class="project-description">Este proyecto fue realizado durante la cursada de Argentina Programa 
-              como Desarrolador full stack. Creado desde cero a partir de tecnologias tales como: Html, Css, Javascript y 
-              Angular por parte de FrontEnd seguido de MySql, Java y ... por parte de BackEnd.</h5>
-          </div>  
-          </div>
-        </div>
-      </section>
-    </div> 
-  <!------------------- Contacto ------------------->
-    <div class="horizontal-padding vertical-padding">
-      <section class="contact" id="contacto">
-        <h2 class="contact-title">Contacto</h2>
-        <div class="contact-details">
-          <div class="contact-details-group">
-            <p class="contact-label">Dirección:</p>
-            <p class="contact-text">Mendoza, Argentina</p>
-          </div>
-          <div class="contact-details-group">
-            <p class="contact-label">Email:</p>
-            <p class="contact-text">jonibgarcia@gmail.com</p>
-          </div>
-          <div class="contact-details-group">
-            <p class="contact-text">
-              Deje su mensaje y con gusto le responderé
-            </p>
-          </div>
-        </div>
-        <form class="contact-form" name="contact">
-          <div class="contact-form-group">
-            <label for="name">Nombre</label>
-            <input required type="text" name="name" id="name" />
-          </div>
-          <div class="contact-form-group">
-            <label for="email">Email</label>
-            <input required type="email" name="email" id="email" />
-          </div>
-          <div class="contact-form-group">
-            <label for="message">Mensaje</label>
-            <textarea required name="message" id="message" rows="6"></textarea>
-          </div>
-    
-          <button type="submit" class="contact-form-submit">Enviar</button>
-        </form>
-        <nav class="redes">
-          <div class="container-center">
-            <ul class="list-group list-group-horizontal">
-              <a href="https://www.linkedin.com/in/johnny-garcia-74204a262/" target="_blank"><li class="list-group-item"><i class="fa-brands fa-linkedin-in fa-2xl"></i></li></a>
-              <a href="https://mail.google.com/mail/u/0/?pli=1#inbox" target="_blank"><li class="list-group-item"><i class="fa-regular fa-envelope fa-2xl"></i></li></a>
-              <a href="https://github.com/JohnnyGarcia8" target="_blank"><li class="list-group-item"><i class="fa-brands fa-github fa-2xl"></i></li></a>
-            </ul>
-          </div>
-        </nav>
-      </section>
-    </div>
-  <!------------------- Footer ------------------->    
-    <footer class="footer">
-      <div class="container text-center" id="footer">
-        <p>
-          <font style="vertical-align: inherit;">
-            <font style="vertical-align: inherit;"> Copyright © 2023. </font>
-          </font>
-          <a href="#">
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;"> Jonathan García </font>
-            </font>
-          </a>
-          <br>
-          <font style="vertical-align: inherit;">
-            <font style="vertical-align: inherit;"> Todos los derechos reservados </font>
-          </font>
-        </p>
-      </div>
-    </footer>
-    
-     <!--JS Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"crossorigin="anonymous"></script>   
-</body>
-</html>
-
+     <!--Bootstrap/Fontawesome-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <script src="https://kit.fontawesome.com/2a193c6119.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/2a193c6119.js" crossorigin="anonymous"></script>
+     <!--CSS-->
+     <link rel="stylesheet" type="text/css" href="dashboard.css"> 
+     <!--JavaScript-->
+     <script defer src="../Pagina Main/app.js"></script>
+ </head>
+   
+ <body> 
+    <!-------------- Navbar Menú ------------->
+     <header class="header">
+       <nav class="navbar fixed-top">
+         <div class="container-fluid">
+           <div class="logo">
+             <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank">
+              <img src="../ASSETS/IMG/Logo ARGPrograma negro" alt="Logo distintivo">
+             </a>
+           </div>
+           <button class="open-menu" aria-label="Abrir menú">
+             <i class="fa-solid fa-bars fa-2xl"></i>
+           </button>
+           <ul class="menu nav">
+             <button class="close-menu" aria-label="Cerrar menú">
+               <i class="fa-solid fa-arrow-left fa-2xl"></i>
+             </button>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Perfil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            
+     <!--Boton USER-->
+             <li class="btn">
+               <i class="fa-solid fa-user fa-2xl" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
+             </li>
+           </ul>
+         </div>
+       </nav>
+          
+                   <!------SECCIONES-------->
+   <!---------------------- Perfil ---------------------->
+     <div class="horizontal-padding vertical-padding"> <!--Encuadre Desk/Mobile-->
+       <section class="profile" id="perfil">
+         <div class="profile-info">
+           <h3 class="profile-small-title">Bienvenido, soy </h3>
+           <h1 class="profile-title">Jonathan García</h1>
+           <h2 class="profile-titulo-academico">Desarrolador Full Stack Jr</h2>
+           <p class="profile-details">
+             Como joven programador con experiencia limitada, estoy enfocado en expandir continuamente mis conocimientos
+             y el dominio de nuevas tecnologias. Me destaco por ser una persona dedicada y responsable en busca de 
+             un grupo de trabajo unido y dispuesto a crecer. Estoy comprometido a entregar código de alta calidad que 
+             satisfaga las necesidades de los clientes y usuarios finales por igual.
+           </p>
+           <button class="profile-btn-cv">Descargar cv</button>
+         </div>
+         <span class="profile-img-section">
+           <img class="profile-img" src="../ASSETS/IMG/fototraje2.jpg" alt="programador"/>
+         </span>
+       </section>
+     </div>
+   <!-------------------- Experiencia ------------------->
+     <div class="horizontal-padding vertical-padding">
+       <section class="experience" id="experiencia">
+         <div class="contenido-seccion">    
+           <h1 class="experience-title" style="-webkit-text-stroke: 2px #4ab7df;">Experiencia</h1> <!-- -webkit-text-stroke es una propiedad de Css que especifica el ancho y el color de los trazos de los caracteres de texto-->
+           </div>
+             <div class="fila">
+               <div class="col izquierda">
+                   <h2 class="subtitle">Académica</h2>
+                   <div class="item izq">
+                   <h3 class="nombre-institucion">Instituto IMEI</h3>
+                     <h4 class="title-academica">Bachillerato en Ciencias Naturales</h4>
+                       <span class="date">Enero 2015 - Diciembre 2019</span>
+                       <p>Escolta de la bandera del Instituto durante el ciclo lectivo 2019.
+                         Becado por mejor promedio en los ciclos lectivos 2017, 2018 y 2019.</p>
+                     </div>
+                   <div class="item izq">
+                     <h3 class="nombre-institucion">Argentina Programa</h3>
+                       <h4 class="title-academica">#SeProgramar</h4>
+                       <span class="date">Abril 2022 - Junio 2022</span>
+                       <p>Durante la primera etapa de Argentina Programa, obtuve una introducción 
+                         a la programación explorando varios lenguajes tales como: Gobstones, Ruby y 
+                         JavaScript.</p>
+                     </div>
+                   <div class="item izq">
+                     <h3 class="nombre-institucion">Argentina Programa</h3>
+                       <h4 class="title-academica">#YoProgramo</h4>
+                       <span class="date">Octubre 2021 - Mayo 2022</span>
+                       <p>Ultima etapa de cursado, basado en el aprendizaje de diseño de software 
+                         FronEnd y BackEnd. Tecnologias y lenguajes aprendidos: Html, Css, JavaScript, 
+                         Angular, Git Hub, MySql, Java..... </p>
+                     </div>
+                   </div>
+                 <div class="col derecha">
+                   <h2 class="subtitle">Laboral</h2>
+                   <div class="item der">
+                     <h3 class="nombre-empresa">Bianco</h3>
+                       <h4 class="title-laboral">Agente de ventas</h4>
+                       <span class="date">Febrero 2021 - Abril 2021</span>
+                       <p>Vendedor de productos para el hogar, sabanas, toallones, indumentaria, 
+                         calzado, electrodomésticos y bazar.</p>
+                     </div>
+                     <div class="item der">
+                       <h3 class="nombre-empresa">Coquimbito Beer Club</h3>
+                         <h4 class="title-laboral">Bartender</h4>
+                         <span class="date">Octubre 2021</span>
+                         <p>Tareas realizadas: atención al público, elaboración de bebidas y cocteles 
+                           adenás de proveer cerveza tirada de barril. </p>
+                     </div>
+                     <div class="item der">
+                       <h3 class="nombre-empresa">Gulf</h3>
+                         <h4 class="title-laboral">Expendedor de combustible</h4>
+                         <span class="date">Diciembre 2021 - Abril 2022 </span>
+                         <p>Tareas realizadas: administración de dinero, atención al público y manipulación
+                            de combustibles líquidos y gaseosos.</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="container text-center" id="Carrusel"> <!-- Uso carrusel para darle movimiento a los certificados-->
+                   <div class="row">
+                       <div id="carouselCertificados" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                         <div class="carousel-inner">
+                           <div class="carousel-item active text-center">
+                             <img src="../ASSETS/IMG/Certificado SeProgramar.jpeg" class="img-fluid" alt="CertificadoSeProgramar">
+                           </div>
+                           <div class="carousel-item">
+                             <img src="../ASSETS/IMG/Certificado Git- GitHub.png" class="img-fluid" alt="CertificadoGitHub">
+                           </div>
+                         </div>   <!--Flechas para cambiar de img-->
+                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificados" data-bs-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                           <span class="visually-hidden">Previous</span>
+                         </button>
+                         <button class="carousel-control-next" type="button" data-bs-target="#carouselCertificados" data-bs-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                           <span class="visually-hidden">Next</span>
+                         </button>
+                       </div>
+                 </div>
+                 </div>
+                 </div>
+               </section>
+             </div>             
+   <!------------------- Habilidades -------------------->
+     <div class="horizontal-padding vertical-padding">
+       <section class="habilidades" id="skills">
+         <div class="container-fluid">
+           <div class="container text-center">
+             <div class="position-relative d-flex align-items-center justify-content-center">
+               <h1 class="skills-title" style="-webkit-text-stroke: 2px #4ab7df;">Hard & Soft Skills</h1>
+             </div>
+           <div class="row align-items-center">
+       
+           <div class="col-md-6"> <!-- md(medium) resolucion de pantalla  ≥768px -->
+        <!---- Barra HTML ---->
+           <div class="skill mb-4"> <!--(margin-bottom-4) = (propiedad-lado-espacio)-->
+             <div class="d-flex justify-content-between">
+               <h6 class="tecnologia" >HTML</h6>  
+               <h6 class="porcentaje">85%</h6>
+             </div>
+             <div class="progress"> <!--elemento indicador de progreso sacado de bootstrap-->
+              <div class="progress-bar" id="html" role="progressbar" style="--w:85%"></div> <!-- defino la variable --w (=width) que me proporciona en cuanto se expande el progress-->
+             </div>
+           </div>
+        <!---- Barra CSS ---->
+           <div class="skill mb-4">
+             <div class="d-flex justify-content-between">
+               <h6 class="tecnologia">CSS</h6>
+               <h6 class="porcentaje">85%</h6>
+             </div>
+             <div class="progress">
+               <div class="progress-bar bg-primary" id="css" role="progressbar" style="--w:85%;"></div>
+             </div>
+           </div>
+        <!---- Barra JAVASCRIPT ---->
+           <div class="skill mb-4">
+             <div class="d-flex justify-content-between">
+               <h6 class="tecnologia">Javascript</h6>
+               <h6 class="porcentaje">20%</h6>
+             </div>
+             <div class="progress">
+               <div class="progress-bar" id="javascript" role="progressbar" style="--w:20%;"></div>
+             </div>
+           </div>
+         </div> 
+         
+         <div class="col-md-6">
+           <!---- Barra ANGULAR ---->
+           <div class="skill mb-4">
+             <div class="d-flex justify-content-between">
+               <h6 class="tecnologia">Angular</h6>
+               <h6 class="porcentaje">50%</h6>
+             </div>
+             <div class="progress">
+              <div class="progress-bar bg-danger" id="angular" role="progressbar" style="--w:50%;"></div>
+             </div>
+           </div>
+        <!---- Barra  ---->
+           <div class="skill mb-4">
+             <div class="d-flex justify-content-between">
+               <h6 class="tecnologia">Ej</h6>
+               <h6 class="porcentaje">75%</h6>
+             </div>
+             <div class="progress">
+               <div class="progress-bar bg-info" id="ej" role="progressbar" style="--w:75%;"></div>
+             </div>
+           </div>
+        <!---- Barra  ---->
+           <div class="skill mb-4">
+             <div class="d-flex justify-content-between">
+               <h6 class="tecnologia">Ej</h6>
+               <h6 class="porcentaje">40%</h6>
+             </div>
+             <div class="progress">
+               <div class="progress-bar bg-dark" id="ej" role="progressbar" style="--w:40%;"></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ </div>
+   <!------------------- Proyectos ------------------->
+     <div class="horizontal-padding vertical-padding">  
+       <section class="project" id="proyectos">
+         <div class="project-body">
+         <div class="container text-center">
+           <div class="position-relative d-flex align-items-center justify-content-center"> <!--propiedades-->
+             <h1 class="project-title" style="-webkit-text-stroke: 2px #4ab7df;">Proyectos</h1>
+           </div>
+           <div class="projects">
+           <h3 class="project-subtitle">Calculadora</h3>
+           <span class="project-date">Noviembre 2022</span>
+           <span class="project-img-section">
+             <img class="img-fluid" src="../ASSETS/IMG/Calculadora.png" alt="Calculadora">
+           </span>
+           <h5 class="project-description"> Contiene botones funcionales que nos permiten realizar cálculos 
+             aritméticos (suma, resta, multiplicación y división) además de un botón (C) para eliminar el cálculo en curso. 
+           </h5>
+         </div>
+           <div class="projects">
+             <h3 class="project-subtitle">Portfolio Web</h3>
+             <span class="project-date">Octubre 2022 - Mayo 2023</span>
+             <span class="project-img-section">
+               <img class="img-fluid" src="../ASSETS/IMG/Img-Portfolio.png" alt="Porfolio Web">
+             </span>
+             <h5 class="project-description">Este proyecto fue realizado durante la cursada de Argentina Programa 
+               como Desarrolador full stack. Creado desde cero a partir de tecnologias tales como: Html, Css, Javascript y 
+               Angular por parte de FrontEnd seguido de MySql, Java y ... por parte de BackEnd.</h5>
+           </div>  
+           </div>
+         </div>
+       </section>
+     </div> 
+   <!------------------- Contacto ------------------->
+     <div class="horizontal-padding vertical-padding">
+       <section class="contact" id="contacto">
+         <h2 class="contact-title">Contacto</h2>
+         <div class="contact-details">
+           <div class="contact-details-group">
+             <p class="contact-label">Dirección:</p>
+             <p class="contact-text">Mendoza, Argentina</p>
+           </div>
+           <div class="contact-details-group">
+             <p class="contact-label">Email:</p>
+             <p class="contact-text">jonibgarcia@gmail.com</p>
+           </div>
+           <div class="contact-details-group">
+             <p class="contact-text">
+               Deje su mensaje y con gusto le responderé
+             </p>
+           </div>
+         </div>
+         <form class="contact-form" name="contact"> <!-- utilizo formulario-->
+           <div class="contact-form-group">
+             <label for="name">Nombre</label>
+             <input required type="text" name="name" id="name" /> <!--input required type restringe la posibilidad de que el casillero este vacio-->
+           </div>
+           <div class="contact-form-group">
+             <label for="email">Email</label><!--Un label contiene: el nombre del control con el que va asociado, y el texto a mostrar-->
+             <input required type="email" name="email" id="email" />
+           </div>
+           <div class="contact-form-group">
+             <label for="message">Mensaje</label>
+             <textarea required name="message" id="message" rows="6"></textarea>
+           </div>
+     
+           <button type="submit" class="contact-form-submit">Enviar</button>
+         </form>
+         <nav class="redes">
+           <div class="container-center">
+             <ul class="list-group list-group-horizontal">
+               <a href="https://www.linkedin.com/in/johnny-garcia-74204a262/" target="_blank"><li class="list-group-item"><i class="fa-brands fa-linkedin-in fa-2xl"></i></li></a>
+               <a href="https://mail.google.com/mail/u/0/?pli=1#inbox" target="_blank"><li class="list-group-item"><i class="fa-regular fa-envelope fa-2xl"></i></li></a>
+               <a href="https://github.com/JohnnyGarcia8" target="_blank"><li class="list-group-item"><i class="fa-brands fa-github fa-2xl"></i></li></a>
+             </ul>
+           </div>
+         </nav>
+       </section>
+     </div>
+   <!------------------- Footer ------------------->    
+     <footer class="footer">
+       <div class="container text-center" id="footer">
+         <p id="contenedor-info">
+           <font style="vertical-align: inherit;"> <!-- font(fuente) nos indica el tamaño, color, o fuente del texto que contiene-->
+             <font style="vertical-align: inherit;"> Copyright © 2023.</font> <!--vertical-align puede usarse para alterar la ubicación vertical de un elemento-->
+           </font>                                                             <!--inherit hace que el elemento al cual se aplica tome el valor calculado de la propiedad de su elemento padre-->
+           <a href="#" class="return">
+             <font style="vertical-align: inherit;">
+               <font style="vertical-align: inherit;"> Jonathan García </font>
+               <i class="fa-solid fa-arrow-up-long"></i>
+             </font>
+           </a>
+           <br>
+           <font style="vertical-align: inherit;">
+             <font style="vertical-align: inherit;"> Todos los derechos reservados </font>
+           </font>
+         </p>
+       </div>
+     </footer>
+     
+      <!--JS Bootstrap-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"crossorigin="anonymous"></script>   
+ </body>
+ </html>
+ 
