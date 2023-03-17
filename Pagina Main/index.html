@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Maquetado </title>
+    <!--Bootstrap/Fontawesome-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <script src="https://kit.fontawesome.com/2a193c6119.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/2a193c6119.js" crossorigin="anonymous"></script>
     <!--CSS-->
@@ -14,7 +15,7 @@
 </head>
   
 <body> 
-   <!--Navbar-->
+   <!-------------- Navbar Menú ------------->
     <header class="header">
       <nav class="navbar fixed-top">
         <div class="container-fluid">
@@ -44,7 +45,7 @@
         </div>
       </nav>
            
-    <!--Modal LOGIN-User--->
+    <!--Modal LOGIN_User--->
     <div class="modal fade modal-lg text-black" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -80,7 +81,7 @@
                   <!------SECCIONES-------->
 
   <!---------------------- Perfil ---------------------->
-    <div class="horizontal-padding vertical-padding">
+    <div class="horizontal-padding vertical-padding"> <!--Encuadre Desk/Mobile-->
       <section class="profile" id="perfil">
         <div class="profile-info">
           <h3 class="profile-small-title">Bienvenido, soy </h3>
@@ -102,8 +103,8 @@
   <!-------------------- Experiencia ------------------->
     <div class="horizontal-padding vertical-padding">
       <section class="experience" id="experiencia">
-        <div class="contenido-seccion">
-          <h1 class="experience-title" style="-webkit-text-stroke: 2px #4ab7df;">Experiencia</h1>
+        <div class="contenido-seccion">    
+          <h1 class="experience-title" style="-webkit-text-stroke: 2px #4ab7df;">Experiencia</h1> <!-- -webkit-text-stroke es una propiedad de Css que especifica el ancho y el color de los trazos de los caracteres de texto-->
           </div>
             <div class="fila">
               <div class="col izquierda">
@@ -157,18 +158,17 @@
                     </div>
                   </div>
                 </div>
-                <div class="container text-center" id="Carrusel">
+                <div class="container text-center" id="Carrusel"> <!-- Uso carrusel para darle movimiento a los certificados-->
                   <div class="row">
-                    <div class="col-12">
                       <div id="carouselCertificados" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                         <div class="carousel-inner">
                           <div class="carousel-item active text-center">
-                            <img src="../ASSETS/IMG/Certificado Git- GitHub.png" class="img-fluid" alt="...">
+                            <img src="../ASSETS/IMG/Certificado SeProgramar.jpeg" class="img-fluid" alt="CertificadoSeProgramar">
                           </div>
                           <div class="carousel-item">
-                            <img src="../ASSETS/IMG/Certificado SeProgramar.jpeg" class="img-fluid" alt="...">
+                            <img src="../ASSETS/IMG/Certificado Git- GitHub.png" class="img-fluid" alt="CertificadoGitHub">
                           </div>
-                        </div>
+                        </div>   <!--Flechas para cambiar de img-->
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificados" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                           <span class="visually-hidden">Previous</span>
@@ -178,7 +178,6 @@
                           <span class="visually-hidden">Next</span>
                         </button>
                       </div>
-                  </div>
                 </div>
                 </div>
                 </div>
@@ -194,22 +193,22 @@
             </div>
           <div class="row align-items-center">
       
-          <div class="col-md-6">
+          <div class="col-md-6"> <!-- md(medium) resolucion de pantalla  ≥768px -->
        <!---- Barra HTML ---->
-          <div class="skill mb-4">
+          <div class="skill mb-4"> <!--(margin-bottom-4) = (propiedad-lado-espacio)-->
             <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">HTML</h6>  
-              <h6 class="font-weight-bold">85%</h6>
+              <h6 class="tecnologia" >HTML</h6>  
+              <h6 class="porcentaje">85%</h6>
             </div>
-            <div class="progress">
-             <div class="progress-bar" id="html" role="progressbar" style="--w:85%"></div>
+            <div class="progress"> <!--elemento indicador de progreso sacado de bootstrap-->
+             <div class="progress-bar" id="html" role="progressbar" style="--w:85%"></div> <!-- defino la variable --w (=width) que me proporciona en cuanto se expande el progress-->
             </div>
           </div>
        <!---- Barra CSS ---->
           <div class="skill mb-4">
             <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">CSS</h6>
-              <h6 class="font-weight-bold">85%</h6>
+              <h6 class="tecnologia">CSS</h6>
+              <h6 class="porcentaje">85%</h6>
             </div>
             <div class="progress">
               <div class="progress-bar bg-primary" id="css" role="progressbar" style="--w:85%;"></div>
@@ -218,8 +217,8 @@
        <!---- Barra JAVASCRIPT ---->
           <div class="skill mb-4">
             <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">Javascript</h6>
-              <h6 class="font-weight-bold">20%</h6>
+              <h6 class="tecnologia">Javascript</h6>
+              <h6 class="porcentaje">20%</h6>
             </div>
             <div class="progress">
               <div class="progress-bar" id="javascript" role="progressbar" style="--w:20%;"></div>
@@ -231,8 +230,8 @@
           <!---- Barra ANGULAR ---->
           <div class="skill mb-4">
             <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">Angular</h6>
-              <h6 class="font-weight-bold">50%</h6>
+              <h6 class="tecnologia">Angular</h6>
+              <h6 class="porcentaje">50%</h6>
             </div>
             <div class="progress">
              <div class="progress-bar bg-danger" id="angular" role="progressbar" style="--w:50%;"></div>
@@ -241,8 +240,8 @@
        <!---- Barra  ---->
           <div class="skill mb-4">
             <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">Ej</h6>
-              <h6 class="font-weight-bold">75%</h6>
+              <h6 class="tecnologia">Ej</h6>
+              <h6 class="porcentaje">75%</h6>
             </div>
             <div class="progress">
               <div class="progress-bar bg-info" id="ej" role="progressbar" style="--w:75%;"></div>
@@ -251,8 +250,8 @@
        <!---- Barra  ---->
           <div class="skill mb-4">
             <div class="d-flex justify-content-between">
-              <h6 class="font-weight-bold">Ej</h6>
-              <h6 class="font-weight-bold">40%</h6>
+              <h6 class="tecnologia">Ej</h6>
+              <h6 class="porcentaje">40%</h6>
             </div>
             <div class="progress">
               <div class="progress-bar bg-dark" id="ej" role="progressbar" style="--w:40%;"></div>
@@ -269,7 +268,7 @@
       <section class="project" id="proyectos">
         <div class="project-body">
         <div class="container text-center">
-          <div class="position-relative d-flex align-items-center justify-content-center">
+          <div class="position-relative d-flex align-items-center justify-content-center"> <!--propiedades-->
             <h1 class="project-title" style="-webkit-text-stroke: 2px #4ab7df;">Proyectos</h1>
           </div>
           <div class="projects">
@@ -315,13 +314,13 @@
             </p>
           </div>
         </div>
-        <form class="contact-form" name="contact">
+        <form class="contact-form" name="contact"> <!-- utilizo formulario-->
           <div class="contact-form-group">
             <label for="name">Nombre</label>
-            <input required type="text" name="name" id="name" />
+            <input required type="text" name="name" id="name" /> <!--input required type restringe la posibilidad de que el casillero este vacio-->
           </div>
           <div class="contact-form-group">
-            <label for="email">Email</label>
+            <label for="email">Email</label><!--Un label contiene: el nombre del control con el que va asociado, y el texto a mostrar-->
             <input required type="email" name="email" id="email" />
           </div>
           <div class="contact-form-group">
@@ -345,13 +344,14 @@
   <!------------------- Footer ------------------->    
     <footer class="footer">
       <div class="container text-center" id="footer">
-        <p>
-          <font style="vertical-align: inherit;">
-            <font style="vertical-align: inherit;"> Copyright © 2023. </font>
-          </font>
-          <a href="#">
+        <p id="contenedor-info">
+          <font style="vertical-align: inherit;"> <!-- font(fuente) nos indica el tamaño, color, o fuente del texto que contiene-->
+            <font style="vertical-align: inherit;"> Copyright © 2023.</font> <!--vertical-align puede usarse para alterar la ubicación vertical de un elemento-->
+          </font>                                                             <!--inherit hace que el elemento al cual se aplica tome el valor calculado de la propiedad de su elemento padre-->
+          <a href="#" class="return">
             <font style="vertical-align: inherit;">
               <font style="vertical-align: inherit;"> Jonathan García </font>
+              <i class="fa-solid fa-arrow-up-long"></i>
             </font>
           </a>
           <br>
