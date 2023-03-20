@@ -33,6 +33,9 @@ body {
   margin:auto;
   background-repeat: no-repeat;
 }
+.modal{
+  color: var(--text-color2);
+}
 
 /***** encuadre (padding) desk ********/
 .horizontal-padding {
@@ -54,6 +57,13 @@ body {
   padding-top: 1.56rem;
   padding-bottom: 1.4rem;
 } 
+}
+.btn.pencil, .btn.trash{
+  color:var(--text-color2);
+  list-style: none;
+}
+.btn.pencil:hover, .btn.trash:hover{
+  color:red;
 }
 /******************************* NAVBAR ***************************************/
 .header {
