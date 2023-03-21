@@ -61,42 +61,40 @@
         </p>
         <!--Boton editar Acerca de mi -->
         <div class="col">
-          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#acercaModal">	
+          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#acercadeModal">	
             <i class="fa-solid fa-pencil"></i>
           </button>
         <!-- Modal Acerca de mi -->	
-          <div class="modal fade" id="acercaModal" tabindex="-1" aria-labelledby="acercaModal" aria-hidden="true">	
+          <div class="modal fade modal-lg" id="acercadeModal" tabindex="-1" aria-labelledby="acercadeModalLabel" aria-hidden="true">	
             <div class="modal-dialog modal-content">
               <div class="modal-header">
-                <h2 class="modal-title w-100 text-center">Usuario</h2>	 <!--aplico w-100 extraido de la informacion proporcionada en stackoverflow, ya que intente centrarlo de varias formas y no me resultaba exactamente en el medio-->
+                <h3 class="modal-title w-100 text-center"> Mi perfil</h3>	 <!--aplico w-100 extraido de la informacion proporcionada en stackoverflow, ya que intente centrarlo de varias formas y no me resultaba exactamente en el medio-->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body pb-0">
                 <div class="mb-3">
                   <label class="form-group">Nombre y Apellido</label>
-                  <div class="col-sm-12"><input type="text" class="form-control" id="staticEmail" value="">
+                  <div class="col-sm-12"><input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="mb-3">
                   <label class="form-group">Título Académico</label>
                   <div class="col-sm-12">
-                    <input type="text" class="form-control" id="staticEmail" value="">
+                    <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label class="col-sm-2 col-form-label">Descripción</label>
-                  <div class="col-sm-12">
-                    <input type="password" class="form-control" id="inputtitle">
-                  </div>
+                  <label class="form-group">Descripción</label>
+                  <textarea class="form-control" rows="3"></textarea>
                 </div>
-              </div>
+                </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Guardar</button>
               </div>
             </div>
           </div>
         </div>
-            <!-- Casilla-Boton CV-->	
+        <!-- Casilla-Boton CV-->	
         <button class="profile-btn-cv">Descargar cv</button>
         <!--Botones editar/eliminar-->
        <div class="col">	
@@ -106,40 +104,58 @@
         <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
           <li><i class="fa-solid fa-trash"></i></li>
         </button>
-       <div class="modal fade" id="BtnCvModal" tabindex="-1" aria-labelledby="BtnCvModalLabel" aria-hidden="true">	
-     <div class="modal-dialog modal-content">		
-         <div class="modal-body">	
-           <div class="mb-3">	
-          <label class="form-group">Título </label>	
-          <div class="col-sm-12">	
-            <input type="text" class="form-control" id="staticEmail" value="">	
-          </div>	
+        <!-- Modal CV-->
+       <div class="modal fade" id="BtnCvModal" tabindex="-1" aria-labelledby="BtnCvModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title w-100 text-center">Casillero - Boton </h3>	 
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>		
+          <div class="modal-body">
+            <div class="mb-1">
+              <label class="form-group pb-2">Título </label>	
+            <div class="col-sm-12">
+              <input type="text" class="form-control">
+            </div>	
+          </div>
         </div>
-         </div>
-       </div>
-   </div>
-       </div>
+        <div class="modal-footer pb-1 pt-1">
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
       </div>
-          <!-- IMG Pefil con botones-->	
+    </div>
+  </div>
+</div>
+         <!-- IMG Perfil-->	
       <span class="profile-img-section">
         <img class="profile-img" src="../ASSETS/IMG/fototraje2.jpg" alt="programador"/> 
-       <!--Boton editar-->
+       <!--Boton editar IMG Perfil-->
        <div class="col">	
         <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#imgPerfilModal">	
           <i class="fa-solid fa-pencil"></i>
         </button>
+        <!-- Modal IMG Perfil-->
        <div class="modal fade" id="imgPerfilModal" tabindex="-1" aria-labelledby="imgPerfilModalLabel" aria-hidden="true">	
-     <div class="modal-dialog modal-content">		
-         <div class="modal-body">	
-           <div class="mb-3">	
-             <label  class="form-label">Archivos</label>	
-             <input class="form-control" type="file" id="formFile">
-           </div>
+     <div class="modal-dialog modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title w-100 text-center">Imagen de perfil</h3>	 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>		
+         <div class="modal-body">
+          <div class="mb-1">
+            <label class="form-group pb-2">Nueva imagen</label>	
+          <div class="col-sm-12">
+            <input class="form-control" type="file" id="formFile">
+          </div>
          </div>
        </div>
-     </div>
-   </div>
-  </span>
+       <div class="modal-footer pb-1 pt-1">
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</span>
 </section>
 </div>
 
@@ -150,15 +166,91 @@
            <h1 class="experience-title" style="-webkit-text-stroke: 2px #4ab7df;">Experiencia</h1> <!-- -webkit-text-stroke es una propiedad de Css que especifica el ancho y el color de los trazos de los caracteres de texto-->
            </div>
              <div class="fila">
+
+                <!-------------Columna Izquierda----------->
                <div class="col izquierda">
-                   <h2 class="subtitle">Académica</h2>
+                   <h2 class="subtitle">Académica
+                  <!--Botones editar/eliminar Educacion-->
+                    <div class="col">	
+                     <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#educacionModal">	
+                       <li><i class="fa-solid fa-pencil"></i></li>
+                     </button>
+                     <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                       <li><i class="fa-solid fa-trash"></i></li>
+                     </button>
+                  <!-- Modal Educacion-->  <!--coloco el modal una vez por columna y lo llamo mediante sus botones--> 
+                    <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="educacionModalLabel" aria-hidden="true">
+                     <div class="modal-dialog modal-content">
+                       <div class="modal-header">
+                         <h3 class="modal-title w-100 text-center">Educación</h3>	 
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                       </div>		
+                       <div class="modal-body">
+                         <div class="mb-1">
+                           <label class="form-group pb-2">Nuevo título </label>	
+                         <div class="col-sm-12">
+                           <input type="text" class="form-control">
+                         </div>	
+                       </div>
+                     </div>
+                     <div class="modal-footer pb-1 pt-1">
+                       <button type="button" class="btn btn-primary">Guardar</button>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+              </h2>
                    <div class="item izq">
                    <h3 class="nombre-institucion">Instituto IMEI</h3>
                      <h4 class="title-academica">Bachillerato en Ciencias Naturales</h4>
                        <span class="date">Enero 2015 - Diciembre 2019</span>
                        <p>Escolta de la bandera del Instituto durante el ciclo lectivo 2019.
                          Becado por mejor promedio en los ciclos lectivos 2017, 2018 y 2019.</p>
-                     </div>
+                  <!--Boton editar/eliminar Estudios-->
+                         <div class="col">
+                           <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#estudiosModal">	
+                             <i class="fa-solid fa-pencil"></i>
+                           </button>
+                           <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                            <li><i class="fa-solid fa-trash"></i></li>
+                          </button>
+                  <!--Modal Estudios-->	
+                           <div class="modal fade modal-lg" id="estudiosModal" tabindex="-1" aria-labelledby="estudiosModalLabel" aria-hidden="true">	
+                             <div class="modal-dialog modal-content">
+                               <div class="modal-header">
+                                 <h3 class="modal-title w-100 text-center"> Estudios</h3>	 
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                               <div class="modal-body pb-0">
+                                 <div class="mb-3">
+                                   <label class="form-group">Institución</label>
+                                   <div class="col-sm-12"><input type="text" class="form-control">
+                                   </div>
+                                 </div>
+                                 <div class="mb-3">
+                                   <label class="form-group">Título Académico</label>
+                                   <div class="col-sm-12">
+                                     <input type="text" class="form-control">
+                                   </div>
+                                 </div>
+                                 <div class="mb-3">
+                                  <label class="form-group">Fecha</label>
+                                  <div class="col-sm-12">
+                                    <input type="text" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="mb-3">
+                                  <label class="form-group">Descripción</label>
+                                  <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Guardar</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                    <div class="item izq">
                      <h3 class="nombre-institucion">Argentina Programa</h3>
                        <h4 class="title-academica">#SeProgramar</h4>
@@ -166,7 +258,16 @@
                        <p>Durante la primera etapa de Argentina Programa, obtuve una introducción 
                          a la programación explorando varios lenguajes tales como: Gobstones, Ruby y 
                          JavaScript.</p>
-                     </div>
+                  <!--Boton editar/eliminar Estudios-->
+                         <div class="col">
+                          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#estudiosModal">	
+                            <i class="fa-solid fa-pencil"></i>
+                          </button>
+                          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                           <li><i class="fa-solid fa-trash"></i></li>
+                         </button>
+                       </div>
+                   </div>
                    <div class="item izq">
                      <h3 class="nombre-institucion">Argentina Programa</h3>
                        <h4 class="title-academica">#YoProgramo</h4>
@@ -174,34 +275,136 @@
                        <p>Ultima etapa de cursado, basado en el aprendizaje de diseño de software 
                          FronEnd y BackEnd. Tecnologias y lenguajes aprendidos: Html, Css, JavaScript, 
                          Angular, Git Hub, MySql, Java..... </p>
+                  <!--Boton editar/eliminar Estudios-->
+                         <div class="col">
+                          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#estudiosModal">	
+                            <i class="fa-solid fa-pencil"></i>
+                          </button>
+                          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                           <li><i class="fa-solid fa-trash"></i></li>
+                         </button>
+                        </div>
+                      </div>
+                    </div>
+
+                <!-------------Columna Derecha----------->
+                 <div class="col derecha">
+                   <h2 class="subtitle">Laboral
+                  <!--Botones editar/eliminar Trabajo -->
+                    <div class="col">	
+                      <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#trabajoModal">	
+                        <li><i class="fa-solid fa-pencil"></i></li>
+                      </button>
+                      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                        <li><i class="fa-solid fa-trash"></i></li>
+                      </button>
+                  <!-- Modal Trabajo-->   <!--coloco el modal una vez por columna y lo llamo mediante sus botones--> 
+                     <div class="modal fade" id="trabajoModal" tabindex="-1" aria-labelledby="trabajoModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title w-100 text-center">Trabajo</h3>	 
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>		
+                        <div class="modal-body">
+                          <div class="mb-1">
+                            <label class="form-group pb-2">Nuevo título </label>	
+                          <div class="col-sm-12">
+                            <input type="text" class="form-control">
+                          </div>	
+                        </div>
+                      </div>
+                      <div class="modal-footer pb-1 pt-1">
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                      </div>
                      </div>
                    </div>
-                 <div class="col derecha">
-                   <h2 class="subtitle">Laboral</h2>
+                 </div>
+               </h2>
                    <div class="item der">
                      <h3 class="nombre-empresa">Bianco</h3>
                        <h4 class="title-laboral">Agente de ventas</h4>
                        <span class="date">Febrero 2021 - Abril 2021</span>
                        <p>Vendedor de productos para el hogar, sabanas, toallones, indumentaria, 
                          calzado, electrodomésticos y bazar.</p>
-                     </div>
+                  <!--Boton editar/eliminar Empleos-->
+                         <div class="col">
+                          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#empleosModal">	
+                            <i class="fa-solid fa-pencil"></i>
+                          </button>
+                          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                           <li><i class="fa-solid fa-trash"></i></li>
+                         </button>
+                  <!--Modal Empleos-->	
+                          <div class="modal fade modal-lg" id="empleosModal" tabindex="-1" aria-labelledby="empleosModalLabel" aria-hidden="true">	
+                            <div class="modal-dialog modal-content">
+                              <div class="modal-header">
+                                <h3 class="modal-title w-100 text-center"> Empleos</h3>	 
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body pb-0">
+                                <div class="mb-3">
+                                  <label class="form-group">Empresa</label>
+                                  <div class="col-sm-12"><input type="text" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="mb-3">
+                                  <label class="form-group">Título Laboral</label>
+                                  <div class="col-sm-12">
+                                    <input type="text" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="mb-3">
+                                 <label class="form-group">Fecha</label>
+                                 <div class="col-sm-12">
+                                   <input type="text" class="form-control">
+                                 </div>
+                               </div>
+                               <div class="mb-3">
+                                 <label class="form-group">Descripción</label>
+                                 <textarea class="form-control" rows="3"></textarea>
+                               </div>
+                               </div>
+                               <div class="modal-footer">
+                                 <button type="button" class="btn btn-primary">Guardar</button>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
                      <div class="item der">
                        <h3 class="nombre-empresa">Coquimbito Beer Club</h3>
                          <h4 class="title-laboral">Bartender</h4>
                          <span class="date">Octubre 2021</span>
                          <p>Tareas realizadas: atención al público, elaboración de bebidas y cocteles 
-                           adenás de proveer cerveza tirada de barril. </p>
-                     </div>
+                           adenás de proveer cerveza tirada de barril.</p>
+                  <!--Boton editar/eliminar Empleos-->
+                           <div class="col">
+                            <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#empleosModal">	
+                              <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                             <li><i class="fa-solid fa-trash"></i></li>
+                            </button>
+                          </div>
+                        </div>    
                      <div class="item der">
                        <h3 class="nombre-empresa">Gulf</h3>
                          <h4 class="title-laboral">Expendedor de combustible</h4>
                          <span class="date">Diciembre 2021 - Abril 2022 </span>
                          <p>Tareas realizadas: administración de dinero, atención al público y manipulación
                             de combustibles líquidos y gaseosos.</p>
+                            <div class="col">
+                              <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#empleosModal">	
+                                <i class="fa-solid fa-pencil"></i>
+                              </button>
+                              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                               <li><i class="fa-solid fa-trash"></i></li>
+                              </button>
+                            </div>
                      </div>
                    </div>
-                 </div>
-                 <!-- Uso carrusel para darle movimiento a los certificados(img)-->
+                 </div>         
+              <!-- Uso Carrusel para darle movimiento a los certificados(img)-->
                  <div class="container text-center" id="Carrusel"> 
                    <div class="row">
                        <div id="carouselCertificados" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
@@ -221,12 +424,41 @@
                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
                            <span class="visually-hidden">Next</span>
                          </button>
-                       </div>
-                 </div>
-                 </div>
-                 </div>
-               </section>
-             </div>             
+                        </div>
+                      </div> 
+                  <!--Boton editar/eliminar Certificados-->
+                      <div class="col">	
+                       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#certificadosModal">	
+                         <i class="fa-solid fa-pencil"></i>
+                       </button>
+                       <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                        <li><i class="fa-solid fa-trash"></i></li>
+                      </button>
+                  <!-- Modal Certificados-->
+                      <div class="modal fade" id="certificadosModal" tabindex="-1" aria-labelledby="certificadosModalLabel" aria-hidden="true">	
+                    <div class="modal-dialog modal-content">
+                     <div class="modal-header">
+                       <h3 class="modal-title w-100 text-center">Certificados</h3>	 
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>		
+                        <div class="modal-body">
+                         <div class="mb-1">
+                           <label class="form-group pb-2">Nueva imagen</label>	
+                         <div class="col-sm-12">
+                           <input class="form-control" type="file" id="formFile">
+                         </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer pb-1 pt-1">
+                       <button type="button" class="btn btn-primary">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+                          
    <!------------------- Habilidades -------------------->
      <div class="horizontal-padding vertical-padding">
        <section class="habilidades" id="skills">
@@ -410,297 +642,3 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"crossorigin="anonymous"></script>   
  </body>
  </html>
- 
- 
-
-  
-  <main>
-  <!-- Modal Acerca de mi -->	
-  <div class="modal fade" id="acercaModal" tabindex="-1" aria-labelledby="acercaModal" aria-hidden="true">	
-    <div class="modal-dialog modal-content">	
-        <div class="modal-header">	
-          <h2 class="modal-title w-100 text-center">Usuario</h2>	 <!--aplico w-100 extraido de la investigacion en stackoverflow ya que intente centrarlo de varias formas y no me resultaba exzactamente en el medio-->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>	
-        </div>	
-        <div class="modal-body">		
-          <div class="mb-3">	
-            <label class="form-group">Nombre y Apellido</label>	
-            <div class="col-sm-10">	
-              <input type="text" class="form-control" id="staticEmail" value="">	
-            </div>	
-          </div>
-          <div class="mb-3">	
-            <label class="form-group">Título Académico</label>	
-            <div class="col-sm-10">	
-              <input type="text" class="form-control" id="staticEmail" value="">	
-            </div>	
-          </div>		
-          <div class="mb-3">	
-            <label class="col-sm-2 col-form-label">Descripción</label>	
-            <div class="col-sm-10">	
-              <input type="password" class="form-control" id="inputtitle">	
-            </div>	
-          </div>	
-        </div>	
-        <div class="modal-footer">	
-          <button type="button" class="btn btn-primary">Guardar</button>	
-        </div>	
-      </div>	
-    </div>	
-  
-
-    <main> 	
-      <section id="panel" class="panel">	
-        <div class="container text-center">	
-          <div class="row mt-2 g-2 g-lg-3">	
-            <div class="col">	
-              <div><button type="button" class="btn btn-primary btn-lg p-5" data-bs-toggle="modal" data-bs-target="#usuarioModal">	
-        <i class="fa-solid fa-user fa-2xl"></i></button></div>	
-            </div>	
-            <div class="col">	
-              <div><button type="button" class="btn btn-primary btn-lg p-5" data-bs-toggle="modal" data-bs-target="#experienciaModal">	
-        <i class="fa-solid fa-briefcase fa-2xl"></i></button></div>	
-            </div>	
-            <div class="col">	
-              <div><button type="button" class="btn btn-primary btn-lg p-5" data-bs-toggle="modal" data-bs-target="#educacionModal">	
-        <i class="fa-solid fa-school fa-2xl"></i></button></div>	
-            </div>	
-          </div>	
-          <div class="row mt-2 g-2 g-lg-3">	
-            <div class="col">	
-              <div><button type="button" class="btn btn-primary btn-lg p-5" data-bs-toggle="modal" data-bs-target="#habilidadesModal">	
-        <i class="fa-solid fa-circle-plus fa-2xl"></i></button></div>	
-            </div>	
-            <div class="col">	
-              <div><button type="button" class="btn btn-primary btn-lg p-5" data-bs-toggle="modal" data-bs-target="#proyectosModal">	
-        <i class="fa-solid fa-folder fa-2xl"></i></button></div>	
-            </div>	
-            <div class="col">	
-              <div><button type="button" class="btn btn-primary btn-lg p-5" data-bs-toggle="modal" data-bs-target="#comentariosModal">	
-        <i class="fa-solid fa-comments fa-2xl"></i></button></div>	
-                   </div>	
-          </div>	
-        </div>	
-      </section>	
-      <!-- Modal usuario -->	
-      <div class="modal fade" id="usuarioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">	
-        <div class="modal-dialog modal-content">	
-            <div class="modal-header">	
-              <h2 class="modal-title" id="exampleModal">Usuario</h2>	
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>	
-            </div>	
-            <div class="modal-body">	
-              <div class="mb-3">	
-                <label  class="form-label">Archivos</label>	
-                <input class="form-control" type="file" id="formFile">	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Nombre y Apellido</label>	
-                <div class="col-sm-10">	
-                  <input type="text" class="form-control" id="staticEmail" value="">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label class="col-sm-2 col-form-label">Descripción</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-            </div>	
-            <div class="modal-footer">	
-              <button type="button" class="btn btn-primary">Guardar</button>	
-            </div>	
-          </div>	
-        </div>	
-      <!-- Modal experiencia -->	
-      <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">	
-        <div class="modal-dialog modal-content">	
-            <div class="modal-header">	
-              <h2 class="modal-title" id="exampleModal">Empleos</h2>	
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>	
-            </div>	
-            <div class="modal-body">	
-              <div class="mb-3">	
-                <label  class="form-label">Logo empresa</label>	
-                <input class="form-control" type="file" id="formFile">	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Puesto de trabajo</label>	
-                <div class="col-sm-10">	
-                  <input type="text" class="form-control" id="staticEmail" value="">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Descripción de puesto</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Período de puesto</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-            </div>	
-            <div class="modal-footer">	
-              <button type="button" class="btn btn-primary">Guardar</button>	
-            </div>	
-          </div>	
-        </div>	
-        <!-- Modal educacion -->	
-      <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">	
-        <div class="modal-dialog modal-content">	
-            <div class="modal-header">	
-              <h2 class="modal-title" id="exampleModal">Educación</h2>	
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>	
-            </div>	
-            <div class="modal-body">	
-              <div class="mb-4">	
-                <label for="staticEmail" class="col-sm-2 col-form-label">Establecimiento </label>	
-                <div class="col-sm-10">	
-                  <input type="text" class="form-control" id="staticEmail" value="">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label for="inputPassword" class="col-sm-2 col-form-label">Título</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label for="inputPassword" class="col-sm-2 col-form-label">Certificados</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-              <div class="modal-footer">	
-                <button type="button" class="btn btn-primary">Guardar</button>	
-              </div>	
-            </div>	
-          </div>	
-        </div>	
-      <!-- Modal info -->	
-      <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">	
-        <div class="modal-dialog modal-content">	
-            <div class="modal-header">	
-              <h2 class="modal-title" id="exampleModal">Experiencia</h2>	
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>	
-            </div>	
-            <div class="modal-body">	
-              <div class="mb-3">	
-                <label  class="form-label">Logo empresa</label>	
-                <input class="form-control" type="file" id="formFile">	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Puesto de trabajo</label>	
-                <div class="col-sm-10">	
-                  <input type="text" class="form-control" id="staticEmail" value="">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Descripción de puesto</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Período de puesto</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-            </div>	
-            <div class="modal-footer">	
-              <button type="button" class="btn btn-primary">Guardar</button>	
-            </div>	
-          </div>	
-        </div>	
-    <!-- Modal habilidades -->	
-    <div class="modal fade" id="habilidadesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">	
-      <div class="modal-dialog modal-content">	
-          <div class="modal-header">	
-            <h2 class="modal-title" id="exampleModal">Experiencia</h2>	
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>	
-          </div>	
-          <div class="modal-body">	
-            <div class="mb-3">	
-              <label class="form-group">Habilidades</label>	
-              <div class="col-sm-10">	
-                <input type="text" class="form-control" id="staticEmail" value="">	
-              </div>	
-            </div>	
-            <div class="mb-3">	
-              <label class="form-group">Lenguajes</label>	
-              <div class="col-sm-10">	
-                <input type="password" class="form-control" id="inputtitle">	
-              </div>	
-            </div>	
-            <div class="mb-3">	
-              <label class="form-group">Idiomas</label>	
-              <div class="col-sm-10">	
-                <input type="password" class="form-control" id="inputtitle">	
-              </div>	
-            </div>	
-          </div>	
-          <div class="modal-footer">	
-            <button type="button" class="btn btn-primary">Guardar</button>	
-          </div>	
-        </div>	
-      </div>	
-    <!-- Modal proyectos -->	
-      <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">	
-        <div class="modal-dialog modal-content">	
-            <div class="modal-header">	
-              <h2 class="modal-title" id="exampleModal">Proyectos</h2>	
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>	
-            </div>	
-            <div class="modal-body">	
-              <div class="mb-3">	
-                <label class="form-group">Descripción del proyecto</label>	
-                <div class="col-sm-10">	
-                  <input type="text" class="form-control" id="staticEmail" value="">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Fecha de realización</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-              <div class="mb-3">	
-                <label class="form-group">Links o imagenes</label>	
-                <div class="col-sm-10">	
-                  <input type="password" class="form-control" id="inputtitle">	
-                </div>	
-              </div>	
-            </div>	
-            <div class="modal-footer">	
-              <button type="button" class="btn btn-primary">Guardar</button>	
-            </div>	
-          </div>	
-        </div>	
-    <!-- Modal comentarios -->	
-        <div class="modal fade" id="comentariosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">	
-         <div class="modal-dialog modal-content">	
-             <div class="modal-header">	
-               <h2 class="modal-title" id="exampleModal">Comentarios</h2>	
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>	
-             </div>	
-             <div class="modal-body">	
-               <div class="mb-3">	
-                 <label class="form-group">Deja tu opinión</label>	
-                 <div class="col-sm-10">	
-                   <input type="text" class="form-control" id="staticEmail" value="">	
-                 </div>	
-               </div>	
-             <div class="modal-footer">	
-               <button type="button" class="btn btn-primary">Guardar</button>	
-             </div>	
-           </div>	
-         </div>	
-        </div>	
-    </main>
-
-
-

@@ -58,12 +58,22 @@ body {
   padding-bottom: 1.4rem;
 } 
 }
+/***********  BOTONES EDITAR/ELIMINAR  *************/
 .btn.pencil, .btn.trash{
   color:var(--text-color2);
   list-style: none;
 }
 .btn.pencil:hover, .btn.trash:hover{
   color:red;
+}
+label.form-group{
+  font-size: 1.25rem;
+}
+.btn-close{
+  font-size: 1.3rem;
+}
+.form-control{
+  border-color:skyblue;
 }
 /******************************* NAVBAR ***************************************/
 .header {
