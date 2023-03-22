@@ -58,6 +58,7 @@ body {
   padding-bottom: 1.4rem;
 } 
 }
+
 /***********  BOTONES EDITAR/ELIMINAR  *************/
 .btn.pencil, .btn.trash{
   color:var(--text-color2);
@@ -75,6 +76,16 @@ label.form-group{
 .form-control{
   border-color:skyblue;
 }
+/**************** MODALES **************************/
+.contact, #botones-contacto{
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+.modal.fade{
+  width: 97%;
+}}
+
 /******************************* NAVBAR ***************************************/
 .header {
   box-shadow: 0 0.1rem 0.1rem var(--navbar-shadow-color); /** sombra navbar **/
@@ -522,7 +533,7 @@ h6{
   font-size: 1.1rem;
   padding: 0.6rem 0;
   font-weight: 550;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 .project-body {
   background-color:var(--primary-color);
@@ -615,9 +626,9 @@ h6{
 
 .contact-form input, .contact-form textarea {
   border-radius: 0.4rem;
-  border: none;
   height: 1.87rem;
   padding: 0.3rem 0.6rem;
+  border-color: skyblue;
 }
 .contact-form textarea {
   height: auto;
@@ -640,7 +651,6 @@ h6{
   justify-content: center;
   align-items: center;
 }
-
 .list-group{ /*oculto color de fondo y borde en iconos*/
   --bs-list-group-bg:none;
   --bs-list-group-border-color:none;
