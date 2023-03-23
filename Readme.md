@@ -1,7 +1,7 @@
 <!------ Escribi toda la informacion de mi porfolio y luego le di formato a mi archivo readme mediante la pagina https://pandao.github.io/editor.md/index.html ------->
 
 
-# Portfolio Web :tw-1f4dd:
+# Portfolio Web
 
 ## ¡Bienvenidos! 
 Les explicaré  como lleve a cabo mi porfolio web.
@@ -33,14 +33,13 @@ Para el diseño utilice colores llamativos pero no saturados, la ubicación de l
 ### Instalación
 Para ejecutar este sitio web en su máquina local, siga estos pasos:
 
-     Clone este repositorio en su máquina local usando git clone mediante el 
-     siguiente link https://github.com/JohnnyGarcia8/PortfolioFrontEnd.git.
-     Abra la carpeta Portfolio FrontEnd  en Visual studio Code.
-     Ya puede utilizar y modificar el codigo a su gusto.
+1. Clone este repositorio en su máquina local usando git clone mediante el siguiente link https://github.com/JohnnyGarcia8/PortfolioFrontEnd.git .
+2.  Abra la carpeta Portfolio FrontEnd  en Visual studio Code.
+3.  Ya puede utilizar y modificar el codigo a su gusto.
 
 ------------
 
-#### Autor
+### Autor
 Nombre: Jonathan García
 
 Correo electrónico: jonibgarcia@gmail.com
