@@ -13,8 +13,37 @@
      <!--JavaScript-->
      <script defer src="../Pagina Main/app.js"></script>
  </head>
-   
- <body> 
+   <!--Banner-->
+ <body id="Banner"> 
+   <!--Botones editar/eliminar-->
+   <div class="col" id="bannerBtn">	
+    <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#BannerModal">	
+      <li><i class="fa-solid fa-pencil"></i></li>
+    </button>
+    <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+      <li><i class="fa-solid fa-trash"></i></li>
+    </button>
+    <!-- Modal Banner-->
+   <div class="modal fade" id="BannerModal" tabindex="-1" aria-labelledby="BannerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title w-100 text-center">Banner </h3>	 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>		
+      <div class="modal-body">
+        <div class="mb-1">
+          <label class="form-group pb-2">Nueva imagen</label>	
+        <div class="col-sm-12">
+          <input class="form-control" type="file" id="formFile">
+        </div>
+       </div>
+    </div>
+    <div class="modal-footer pb-1 pt-1">
+      <button type="button" class="btn btn-primary">Guardar</button>
+    </div>
+  </div>
+</div>
+</div>
     <!--------------- Navbar Menú ------------------->
      <header class="header">
        <nav class="navbar fixed-top">
@@ -44,6 +73,7 @@
            </ul>
          </div>
        </nav>
+    </header>
           
                    <!------SECCIONES-------->
    <!---------------------- Perfil ---------------------->

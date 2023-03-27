@@ -28,7 +28,9 @@ body {
   background-color: #c9e5f6;
   padding-top: 4.38rem;
   color: var(--text-color1);
-  background-image: url(../ASSETS/IMG/pexels-consuelo-borroni-14806765\ prueba.jpg); /*Banner*/
+}
+#Banner{
+  background-image: url(../ASSETS/IMG/Banner\ 2.jpg); /*Banner*/
   background-position: top;
   margin:auto;
   background-repeat: no-repeat;
@@ -93,7 +95,9 @@ body {
 .nav-item {
   padding: 0 0.8rem;
 }
-
+.nav-link.active{
+  color: var(--text-color1);
+}
 .nav-link {
   font-family:"Noto", sans-serif;
   color: var( --text-color1);
