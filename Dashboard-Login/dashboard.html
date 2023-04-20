@@ -20,7 +20,7 @@
     <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#BannerModal">	
       <li><i class="fa-solid fa-pencil"></i></li>
     </button>
-    <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+    <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
       <li><i class="fa-solid fa-trash"></i></li>
     </button>
     <!-- Modal Banner-->
@@ -68,7 +68,7 @@
             
      <!--Boton USER-->
              <li class="btn">
-               <i class="fa-solid fa-user fa-2xl" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
+              <i class="fa-solid fa-arrow-right-from-bracket fa-2xl" type="button"></i>
              </li>
            </ul>
          </div>
@@ -129,11 +129,28 @@
         <!--Botones editar/eliminar-->
        <div class="col">	
         <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#BtnCvModal">	
-          <li><i class="fa-solid fa-pencil"></i></li>
+          <i class="fa-solid fa-pencil"></i>
         </button>
-        <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
-          <li><i class="fa-solid fa-trash"></i></li>
+        <button type="button" class="btn trash" data-bs-toggle="modal"   data-bs-target="#eliminar-Modal">	
+          <i class="fa-solid fa-trash"></i>
         </button>
+        <!-- Modal ELIMINAR-->  <!--coloco el modal una vez y lo llamo mediante su boton donde sea necesario--> 
+        <div class="modal fade" id="eliminar-Modal" tabindex="-1" aria-labelledby="eliminar-ModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title w-100 text-center">ATENCIÓN</h3>	 
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>		
+            <div class="modal-body">
+              <div class="mb-1">
+                <label class="form-group pb-2">¿Desea eliminar este elemento?</label>	
+              </div>
+            </div>
+            <div class="modal-footer pb-1 pt-1">
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+         </div>
+       </div>
         <!-- Modal CV-->
        <div class="modal fade" id="BtnCvModal" tabindex="-1" aria-labelledby="BtnCvModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-content">
@@ -197,22 +214,62 @@
            </div>
              <div class="fila">
 
-                <!-------------Columna Izquierda----------->
+                <!-------------COLUMNA EDUCACION----------->
                <div class="col izquierda">
                    <h2 class="subtitle">Académica
+                  <!--BOTONES-->
+                  <!--Boton y modal AGREGAR Empleos-->	
+                  <div class="col">
+                    <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-edu-Modal">	
+                    <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+                    </button>
+                    <div class="modal fade modal-lg" id="plus-edu-Modal" tabindex="-1" aria-labelledby="plus-edu-ModalLabel" aria-hidden="true">	
+                      <div class="modal-dialog modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title w-100 text-center"> Estudios</h3>	 
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pb-0">
+                          <div class="mb-3">
+                            <label class="form-group">Institución</label>
+                            <div class="col-sm-12"><input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-group">Título Académico</label>
+                            <div class="col-sm-12">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                           <label class="form-group">Fecha</label>
+                           <div class="col-sm-12">
+                             <input type="text" class="form-control">
+                           </div>
+                         </div>
+                         <div class="mb-3">
+                           <label class="form-group">Descripción</label>
+                           <textarea class="form-control" rows="3"></textarea>
+                         </div>
+                         </div>
+                         <div class="modal-footer">
+                           <button type="button" class="btn btn-primary">Agregar</button>
+                         </div>
+                       </div>
+                     </div>
+                     
                   <!--Botones editar/eliminar Educacion-->
-                    <div class="col">	
                      <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#educacionModal">	
                        <li><i class="fa-solid fa-pencil"></i></li>
                      </button>
-                     <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                     <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                        <li><i class="fa-solid fa-trash"></i></li>
                      </button>
                   <!-- Modal Educacion-->  <!--coloco el modal una vez por columna y lo llamo mediante sus botones (y en las demas secciones)--> 
                     <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="educacionModalLabel" aria-hidden="true">
                      <div class="modal-dialog modal-content">
                        <div class="modal-header">
-                         <h3 class="modal-title w-100 text-center">Educación</h3>	 
+                         <h3 class="modal-title w-100 text-center">Académica</h3>	 
                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                        </div>		
                        <div class="modal-body">
@@ -241,7 +298,7 @@
                            <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#estudiosModal">	
                              <i class="fa-solid fa-pencil"></i>
                            </button>
-                           <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                           <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                             <li><i class="fa-solid fa-trash"></i></li>
                           </button>
                   <!--Modal Estudios-->	
@@ -293,7 +350,7 @@
                           <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#estudiosModal">	
                             <i class="fa-solid fa-pencil"></i>
                           </button>
-                          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                          <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                            <li><i class="fa-solid fa-trash"></i></li>
                          </button>
                        </div>
@@ -310,29 +367,68 @@
                           <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#estudiosModal">	
                             <i class="fa-solid fa-pencil"></i>
                           </button>
-                          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                          <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                            <li><i class="fa-solid fa-trash"></i></li>
                          </button>
                         </div>
                       </div>
                     </div>
 
-                <!-------------Columna Derecha----------->
+                <!-------------COLUMNA TRABAJO----------->
                  <div class="col derecha">
                    <h2 class="subtitle">Laboral
+                  <!--BOTONES-->
+                  <!--Boton y modal AGREGAR Empleos-->	
+                    <div class="col">
+                      <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-empleosModal">	
+                      <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+                      </button>
+                       <div class="modal fade modal-lg" id="plus-empleosModal" tabindex="-1" aria-labelledby="plus-empleosModalLabel" aria-hidden="true">	
+                        <div class="modal-dialog modal-content">
+                          <div class="modal-header">
+                            <h3 class="modal-title w-100 text-center"> Empleos</h3>	 
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body pb-0">
+                            <div class="mb-3">
+                              <label class="form-group">Empresa</label>
+                              <div class="col-sm-12"><input type="text" class="form-control">
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-group">Título Laboral</label>
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                             <label class="form-group">Fecha</label>
+                             <div class="col-sm-12">
+                               <input type="text" class="form-control">
+                             </div>
+                           </div>
+                           <div class="mb-3">
+                             <label class="form-group">Descripción</label>
+                             <textarea class="form-control" rows="3"></textarea>
+                           </div>
+                           </div>
+                           <div class="modal-footer">
+                             <button type="button" class="btn btn-primary">Agregar</button>
+                           </div>
+                         </div>
+                       </div>	
                   <!--Botones editar/eliminar Trabajo -->
-                    <div class="col">	
                       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#trabajoModal">	
                         <li><i class="fa-solid fa-pencil"></i></li>
                       </button>
-                      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                      <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                         <li><i class="fa-solid fa-trash"></i></li>
                       </button>
                   <!-- Modal Trabajo-->   <!--coloco el modal una vez por columna y lo llamo mediante sus botones--> 
                      <div class="modal fade" id="trabajoModal" tabindex="-1" aria-labelledby="trabajoModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-content">
                         <div class="modal-header">
-                          <h3 class="modal-title w-100 text-center">Trabajo</h3>	 
+                          <h3 class="modal-title w-100 text-center">Laboral</h3>	 
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>		
                         <div class="modal-body">
@@ -361,7 +457,7 @@
                           <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#empleosModal">	
                             <i class="fa-solid fa-pencil"></i>
                           </button>
-                          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                          <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                            <li><i class="fa-solid fa-trash"></i></li>
                          </button>
                   <!--Modal Empleos-->	
@@ -412,7 +508,7 @@
                             <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#empleosModal">	
                               <i class="fa-solid fa-pencil"></i>
                             </button>
-                            <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                            <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                              <li><i class="fa-solid fa-trash"></i></li>
                             </button>
                           </div>
@@ -423,11 +519,12 @@
                          <span class="date">Diciembre 2021 - Abril 2022 </span>
                          <p>Tareas realizadas: administración de dinero, atención al público y manipulación
                             de combustibles líquidos y gaseosos.</p>
+                    <!--Boton editar/eliminar Empleos-->
                             <div class="col">
                               <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#empleosModal">	
                                 <i class="fa-solid fa-pencil"></i>
                               </button>
-                              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                              <button type="button" class="btn trash" data-bs-toggle="modal"   data-bs-target="#eliminar-Modal">	
                                <li><i class="fa-solid fa-trash"></i></li>
                               </button>
                             </div>
@@ -461,7 +558,7 @@
                        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#certificadosModal">	
                          <i class="fa-solid fa-pencil"></i>
                        </button>
-                       <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                       <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                         <li><i class="fa-solid fa-trash"></i></li>
                       </button>
                   <!-- Modal Certificados-->
@@ -496,9 +593,39 @@
            <div class="container text-center">
              <div class="position-relative d-flex align-items-center justify-content-center">
                <h1 class="skills-title" style="-webkit-text-stroke: 2px #4ab7df;">Hard & Soft Skills</h1>
-             </div>
+      <!--Boton y modal AGREGAR skills-->
+               <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-skills-Modal">	
+                <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+                </button>
+                <div class="modal fade" id="plus-skills-Modal" tabindex="-1" aria-labelledby="plus-skills-ModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title w-100 text-center">Tecnología </h3>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-1">
+                        <label class="form-group pb-2">Título </label>
+                        <div class="col-sm-12">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-1">
+                        <label class="form-group pb-2">Porcentaje </label>	
+                      <div class="col-sm-12">
+                        <input type="text" class="form-control">
+                      </div>	
+                    </div>
+                  </div>
+                  <div class="modal-footer pb-1 pt-1">
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
            <div class="row align-items-center">
-       
            <div class="col-md-6"> <!-- md(medium) resolucion de pantalla  ≥768px -->
       <!------- Barra HTML ------->
            <div class="skill mb-4"> <!--(margin-bottom-4) = (propiedad-lado-espacio)-->
@@ -509,16 +636,18 @@
              <div class="progress"> <!--elemento indicador de progreso sacado de bootstrap-->
               <div class="progress-bar" id="html" role="progressbar" style="--w:85%"></div> <!-- defino la variable --w (=width) que me proporciona en cuanto se expande el progress-->
              </div>
-           </div> 
+           </div>                  
+        <!--Boton y modal AGREGAR skills-->	
+           <div class="col">
+            
         <!--Botones editar/eliminar-->
-            <div class="col">	
              <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
                <li><i class="fa-solid fa-pencil"></i></li>
              </button>
-             <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+             <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                <li><i class="fa-solid fa-trash"></i></li>
              </button>
-             <!-- Modal CV-->
+             <!-- Modal skills-->
             <div class="modal fade" id="skillsBtnModal" tabindex="-1" aria-labelledby="skillsBtnModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-content">
                 <div class="modal-header">
@@ -561,7 +690,7 @@
                 <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
                 <li><i class="fa-solid fa-pencil"></i></li>
                 </button>
-                <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                 <li><i class="fa-solid fa-trash"></i></li>
                 </button>
               </div>
@@ -580,7 +709,7 @@
               <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
                 <li><i class="fa-solid fa-pencil"></i></li>
               </button>
-              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+              <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                 <li><i class="fa-solid fa-trash"></i></li>
               </button>
              </div>
@@ -602,7 +731,7 @@
               <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
                 <li><i class="fa-solid fa-pencil"></i></li>
               </button>
-              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+              <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                 <li><i class="fa-solid fa-trash"></i></li>
               </button>
             </div>
@@ -621,7 +750,7 @@
               <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
                 <li><i class="fa-solid fa-pencil"></i></li>
               </button>
-              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+              <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                 <li><i class="fa-solid fa-trash"></i></li>
               </button>
             </div>
@@ -639,7 +768,7 @@
               <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
                 <li><i class="fa-solid fa-pencil"></i></li>
               </button>
-              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+              <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                 <li><i class="fa-solid fa-trash"></i></li>
               </button>
              </div>
@@ -658,6 +787,45 @@
          <div class="container text-center">
            <div class="position-relative d-flex align-items-center justify-content-center"> <!--propiedades-->
              <h1 class="project-title" style="-webkit-text-stroke: 2px #4ab7df;">Proyectos</h1>
+      <!--Boton y modal AGREGAR Proyectos-->
+             <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-proyect-Modal">	
+              <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+              </button>
+              <div class="modal fade modal-lg" id="plus-proyect-Modal" tabindex="-1" aria-labelledby="plus-proyect-ModalLabel" aria-hidden="true">	
+                <div class="modal-dialog modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title w-100 text-center">Proyectos </h3>	 
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body pb-0">
+                    <div class="mb-3">
+                      <label class="form-group pb-2">Título </label>
+                      <div class="col-sm-12">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-group pb-2">Fecha </label>
+                      <div class="col-sm-12">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-group pb-2">Nueva imagen</label>	
+                    <div class="col-sm-12">
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                   </div>
+                    <div class="mb-3">
+                      <label class="form-group pb-1">Descripción</label>
+                      <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Agregar</button>
+                  </div>
+                </div>
+              </div>
            </div>
            <div class="projects">
            <h3 class="project-subtitle">Calculadora</h3>
@@ -670,10 +838,12 @@
            </h5>
       <!---Boton editar/eliminar proyectos 1 --->
         <div class="col pb-3 mb-1">
+          <!--Boton y modal AGREGAR Proyectos-->	
+          <div class="col">
           <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#proyectosModal">	
             <i class="fa-solid fa-pencil"></i>
           </button>
-          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+          <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
             <li><i class="fa-solid fa-trash"></i></li>
           </button>
       <!-- Modal Proyectos -->	
@@ -728,7 +898,7 @@
                  <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#proyectosModal">	
                    <i class="fa-solid fa-pencil"></i>
                  </button>
-                 <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                 <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                    <li><i class="fa-solid fa-trash"></i></li>
                  </button>
            </div>  
@@ -750,7 +920,7 @@
             <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#direccionModal">	
               <li><i class="fa-solid fa-pencil"></i></li>
             </button>
-            <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+            <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
               <li><i class="fa-solid fa-trash"></i></li>
             </button>
       <!--- Modal Direccion --->  
@@ -789,7 +959,7 @@
             <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#emailModal">	
               <li><i class="fa-solid fa-pencil"></i></li>
             </button>
-            <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+            <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
               <li><i class="fa-solid fa-trash"></i></li>
             </button>
       <!--- Modal Email --->  
@@ -828,7 +998,7 @@
               <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#descripcionCtModal">	
                 <li><i class="fa-solid fa-pencil"></i></li>
               </button>
-              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+              <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                 <li><i class="fa-solid fa-trash"></i></li>
               </button>
       <!--- Modal descripcionCt --->  
@@ -871,7 +1041,7 @@
              <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#formContactoModal">	
                <i class="fa-solid fa-pencil"></i>
              </button>
-             <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+             <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
                <li><i class="fa-solid fa-trash"></i></li>
              </button>
       <!-- Modal Formulario contacto -->	
@@ -922,7 +1092,7 @@
           <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#redesContactoModal">	
             <i class="fa-solid fa-pencil"></i>
           </button>
-          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+          <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
             <li><i class="fa-solid fa-trash"></i></li>
           </button>
    <!-- Modal Redes-->	

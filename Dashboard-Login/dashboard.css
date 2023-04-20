@@ -54,10 +54,11 @@ body {
 .vertical-padding {
   padding-top: 1.56rem;
   padding-bottom: 1.4rem;
-} 
-}
-
+}}
 /***********  BOTONES EDITAR/ELIMINAR  *************/
+li::marker {
+  content: none; /* oculto el puntito en el icono + */
+}
 #bannerBtn{
   margin-top: 1rem;
   display: flex;
