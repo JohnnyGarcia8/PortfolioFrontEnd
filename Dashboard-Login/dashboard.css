@@ -56,20 +56,23 @@ body {
   padding-bottom: 1.4rem;
 }}
 /***********  BOTONES EDITAR/ELIMINAR  *************/
-li::marker {
-  content: none; /* oculto el puntito en el icono + */
-}
 #bannerBtn{
   margin-top: 1rem;
   display: flex;
   text-align: center;
 }
-.btn.pencil, .btn.trash{
+.btn.pencil, .btn.trash, .btn.agregar{
   color:var(--text-color2);
   list-style: none;
 }
-.btn.pencil:hover, .btn.trash:hover{
-  color:red;
+.btn.pencil:hover{
+  color:greenyellow;
+}
+.btn.trash:hover{
+  color: red;
+}
+.btn.agregar:hover{
+  color:#56dfe7;
 }
 label.form-group{
   font-size: 1.25rem;
@@ -83,6 +86,7 @@ label.form-group{
 /**************** MODALES **************************/
 .modal{
   color: var(--text-color2); /*color negro para las letras de todos los modales*/
+  font-family:'Poppins', sans-serif;
 }
 .contact, #botones-contacto{
   text-align: center;
@@ -464,6 +468,10 @@ li.btn{
   padding: 4rem;
 }
 
+.tecnologia, .porcentaje{
+  padding-bottom: 0.5rem;
+  padding-top: 0.7rem;
+}
 .tecnologia, .porcentaje {
   font-family:'Poppins', sans-serif;
   font-size: 1.5rem;
@@ -485,14 +493,20 @@ li.btn{
   animation: Aumentar 2.5s ease-in-out; /*empieza lento, acelera en el medio y termina lento*/
 }
 
-#html{
+#Html{
   background-color: #eb8724;
 }
-#css{
+#Css{
   background-color: #0BCEAF;
 }
-#javascript{
+#Javascript{
   background-color: #f9f912;
+}
+#GitHub{
+  background-color: #8041a1;
+}
+#SpringBoot{
+  background-color: #3eb244;
 }
 
 @keyframes Aumentar{
